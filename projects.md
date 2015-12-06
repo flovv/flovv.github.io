@@ -13,7 +13,7 @@ From 2009 to 2013 I run a prediction market to forecast the state of the German 
 ### Handelsblatt Kurspiloten	  
 <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/Kurspiloten_Handeln.png" width="150px">
 
-In 2011 helped to run s stock forecasting game.
+In 2011 I helped to run s stock forecasting game.
 [More Information](http://www.handelsblatt.com/finanzen/maerkte/boerse-inside/handelsblatt-kurspiloten-wer-hat-das-beste-gespuer-fuer-die-boerse/4567206.html)
 
 ### Australian Knowledge Exchange
