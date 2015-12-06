@@ -13,7 +13,7 @@ Some information about you!
   <hr>
   <div class="row">
     <div class="col-sm-3">
-      <img src="v3.jpg" height="150px">
+      <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/v3.jpg" height="150px">
     </div>
     <div class="col-sm-7 col-sm-offset-1">
       <h3>Economic Indicator Exchange</h3>
@@ -24,7 +24,7 @@ Some information about you!
   <hr>
   <div class="row">
     <div class="col-sm-3">
-      <img src="Kurspiloten_Handeln.png" width="150px">
+      <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/Kurspiloten_Handeln.png" width="150px">
     </div>
     <div class="col-sm-7 col-sm-offset-1">
       <h3>Handelsblatt Kurspiloten</h3>
@@ -35,7 +35,7 @@ Some information about you!
   <hr>
   <div class="row">
     <div class="col-sm-3">
-      <img src="akx.jpg" width="150px">
+      <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/akx.jpg" width="150px">
     </div>
     <div class="col-sm-7 col-sm-offset-1">
       <h3>Australian Knowledge Exchange</h3>
