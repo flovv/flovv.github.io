@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analyzing Bike Rides
+title: Analyzing "Call a Bike" bike sharing data.
 author: flovv
 published: false
 status: process
@@ -86,7 +86,7 @@ ggplot(trips, aes(timeZ, dt  )) + geom_boxplot() + xlab("") + ylab("commute time
 Commute times are basically the same for the morning/evening trips.
 
 ```{r, echo=FALSE, message=FALSE}
-ggplot(trips, aes(mon, dt, group=mon )) + geom_boxplot() + theme_economist()
+ggplot(trips, aes(mon, dt, group=mon )) + geom_boxplot() + theme_economist() + xlab("") + ylab("commute time in minutes")
 ```
 
 Commute times did not change over the year. (some ups and downs -but it's basically stable.)
@@ -115,7 +115,7 @@ ggplot(working, aes(x=wt, group=wday, fill=wday)) + geom_density(alpha=.3) + xla
 Looks like an easy `r mean(working$wt)*5` hours week (on average). With the time spend at work being quite similar from monday till tuesday. Fridays being more relaxed.
 
 ```{r, echo=FALSE, message=FALSE}
-ggplot(working, aes(y=wt, x=mon)) +geom_boxplot()  + ylab("time spend at work in hours") + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_economist()
+ggplot(working, aes(y=wt, x=mon)) +geom_boxplot()  + xlab("") + ylab("time spend at work in hours") + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_economist()
 
 ```
 
