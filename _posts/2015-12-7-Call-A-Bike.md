@@ -33,12 +33,7 @@ Looks like an easy 50.5118961 hours week (on average). With the time spend at wo
 
 And finally some regression model (using the fantastic stargazer package) to explain the time spend at work ...
 
-``` {.r}
-lm <- lm(wt~wday+mon+dt.x+dt.y, data=working)
-lm1 <- lm(wt~wday+mon, data=working)
 
-stargazer(lm1, lm,  type = "html", title="Explaining time spend at work.")
-```
 
 <table style="text-align:center"><caption>
 <strong>Explaining time spend at work.</strong>
@@ -312,13 +307,7 @@ F Statistic
 
 Why is time spend at work negatively correlated with drive time back from work (variable dt.y)? Finally 3 models to explain the commute time back from work.
 
-``` {.r}
-lm3 <- lm(dt.y~wt, data=working)
-lm4 <- lm(dt.y~wt+wday, data=working)
-lm5 <- lm(dt.y~wt+wday +mon, data=working)
 
-stargazer(lm3,lm4,lm5,  type = "html", title="Explaining commute time back from work.")
-```
 
 <table style="text-align:center"><caption>
 <strong>Explaining commute time back from work.</strong>
