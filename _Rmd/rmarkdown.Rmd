@@ -1,0 +1,144 @@
+---
+layout: post
+title: Analyzing Bike Rides
+author: flovv
+published: false
+status: process
+draft: false
+tags: R 
+---
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(stringr)
+library(lubridate)
+library(ggplot2)
+library(plyr)
+library(grid)
+library(gridExtra)
+library(stargazer)
+require(ggthemes)
+raw <- read.csv("out.txt")
+raw$V1 <- as.character(raw$X.200)
+```
+
+[Call a bike](www.callabike.de) is a service of the "Deutsche Bahn", providing a rental bikes for short trips similar to [citibikeNYC](https://www.citibikenyc.com/). I used it extensively for some time. Recently I found out that they provide individual trip data trough their API.
+I pulled last year's data from the ["CallaBike"-SOAP API](https://github.com/flovv/CallaBike-DataCollect).
+
+
+So it looks like I did `r  length(grep("StartTime", raw$V1,)) `  trips using a Call a Bike in 2014.
+
+```{r, echo=FALSE}
+trips <- data.frame(cbind(raw[grep("StartTime", raw$V1,),]$V1, raw[grep("EndTime", raw$V1,),]$V1) )
+
+trips$start = str_trim(str_split_fixed(trips$X1, "=", 2)[,2])
+trips$end = str_trim(str_split_fixed(trips$X2, "=", 2)[,2])
+
+#as.POSIXlt
+trips$startT <- as.POSIXct(trips$start, format="%Y-%m-%d %H:%M:%S", tz = "CET")
+trips$endT <- as.POSIXct(trips$end, format="%Y-%m-%d %H:%M:%S")
+
+## summertime!
+daylight <- as.interval(ymd_hm("2014-03-30 00:03"), ymd_hm("2014-10-26 24:23"))
+
+trips[trips$startT %within% daylight,]$startT <- trips[trips$startT %within% daylight,]$startT +60*60
+trips[trips$startT %within% daylight,]$endT <- trips[trips$startT %within% daylight,]$endT +60*60
+
+trips$driveTime <- (trips$endT - trips$startT )/ 60 
+trips$mon<- format(trips$startT, "%m %b")
+trips$wday <- format(trips$startT, "%w %a")
+trips$hour <- hour(trips$startT)
+## morning trips!
+trips$morning <- ifelse(trips$hour %in% c(7,8),1,0)
+trips$evening <- ifelse(trips$hour %in% c(15,16,17,18,19,20),1,0)
+## remove
+#print(paste("MAX drive time:", max(trips$driveTime) ))
+
+
+trips <- trips[trips$driveTime <60,]
+trips$dt <- as.numeric(trips$driveTime)
+
+trips$timeZ <- "rest"
+trips$timeZ <-ifelse(trips$evening==1, "evening", trips$timeZ)
+trips$timeZ <-ifelse(trips$morning==1, "morning", trips$timeZ)
+```
+
+After some data cleaning, we will take an initial glimpse at the data.
+
+```{r, echo=FALSE, message=FALSE, out.width = '850px', dpi=200}
+p1=ggplot(trips, aes(hour)) + geom_bar() + ggtitle("# trips hour") +theme_economist()
+
+p2=ggplot(trips, aes(wday)) + geom_bar() + ggtitle("# trips weekday") +theme_economist() + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + xlab("weekday") 
+
+p3=ggplot(trips, aes(mon)) + geom_bar() + ggtitle("# trips month") +theme_economist()+ theme(axis.text.x = element_text(angle = 90, hjust = 1)) + xlab("month")
+grid.arrange(p1, p2, p3, nrow=1)
+```
+
+We see a clear pattern of high usage during the week and at commuting hours.
+
+```{r, echo=FALSE, message=FALSE}
+ggplot(trips, aes(timeZ, dt  )) + geom_boxplot() + xlab("") + ylab("commute time in minutes") +theme_economist()
+
+
+```
+
+Commute times are basically the same for the morning/evening trips.
+
+```{r, echo=FALSE, message=FALSE}
+ggplot(trips, aes(mon, dt, group=mon )) + geom_boxplot() + theme_economist()
+```
+
+Commute times did not change over the year. (some ups and downs -but it's basically stable.)
+
+According to Google Maps the distance is 4.9km. Which makes a total of `r nrow(trips[trips$evening==1 || trips$morning==1,]) *4.9 ` KM in 2014, at an average speed of: `r 4.9/ mean(trips[trips$evening==1 || trips$morning==1,]$dt) *60` .
+
+```{r, echo=FALSE, message=FALSE}
+trips$date <- as.Date(trips$startT)
+working <- trips[trips$morning ==1,]
+working <- merge(working, trips[trips$evening ==1,], by=c("date"))
+working <- working[,c("startT.x", "endT.x", "dt.x", "startT.y", "endT.y", "dt.y")]
+
+working$wt <- working$startT.y -working$endT.x
+working$wt <- as.numeric(working$wt) ## in hours
+working$mon<- format(working$startT.x, "%m %b")
+working$wday <- format(working$startT.x, "%w %a")
+```
+
+As this data indicates starting and ending of commutes, we can calculate the time spend at work.
+
+```{r, echo=FALSE, message=FALSE}
+ggplot(working, aes(x=wt, group=wday, fill=wday)) + geom_density(alpha=.3) + xlab("time spend at work in hours") + theme_economist()
+
+```
+
+Looks like an easy `r mean(working$wt)*5` hours week (on average). With the time spend at work being quite similar from monday till tuesday. Fridays being more relaxed.
+
+```{r, echo=FALSE, message=FALSE}
+ggplot(working, aes(y=wt, x=mon)) +geom_boxplot()  + ylab("time spend at work in hours") + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_economist()
+
+```
+
+And finally some regression model (using the fantastic stargazer package) to explain the time spend at work ...
+
+```{r,results='asis'}
+lm <- lm(wt~wday+mon+dt.x+dt.y, data=working)
+lm1 <- lm(wt~wday+mon, data=working)
+
+stargazer(lm1, lm,  type = "html", title="Explaining time spend at work.")
+```
+
+Why is time spend at work negatively correlated with drive time back from work (variable dt.y)?
+Finally 3 models to explain the commute time back from work.
+
+```{r,results='asis'}
+lm3 <- lm(dt.y~wt, data=working)
+lm4 <- lm(dt.y~wt+wday, data=working)
+lm5 <- lm(dt.y~wt+wday +mon, data=working)
+
+stargazer(lm3,lm4,lm5,  type = "html", title="Explaining commute time back from work.")
+```
+
+There are more potential factors that explain drive time as well, such as weather conditions (especially west wind).
+
+To sum up; Deutsche Bahn could easily knowwhere I live, where I work, and how much I work. I assume that car sharing data is similar privacy sensitive.
