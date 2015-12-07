@@ -4,7 +4,7 @@ title: Analyzing "Call a Bike" bike sharing data.
 ---
 
 
-[Call a bike](www.callabike.de) is a service of the "Deutsche Bahn", providing a rental bikes for short trips similar to [Citi bike NYC](https://www.citibikenyc.com/). I used it extensively for some time. Recently, I discovered that they provide individual trip data trough their API. I pulled last year's data from the ["CallaBike"-SOAP API](https://github.com/flovv/CallaBike-DataCollect).
+[Call a bike](hhtp://www.callabike.de) is a service of the "Deutsche Bahn", providing a rental bikes for short trips similar to [Citi bike NYC](https://www.citibikenyc.com/). I used it extensively for some time. Recently, I discovered that they provide individual trip data trough their API. I pulled last year's data from the ["CallaBike"-SOAP API](https://github.com/flovv/CallaBike-DataCollect).
 
 So it looks like I did 403 trips using a Call a Bike in 2014.
 
