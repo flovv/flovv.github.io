@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analyzing Bike Rides
+title: Analyzing "Call a Bike" bike sharing data.
 author: flovv
 published: true
 status: publish
