@@ -5,7 +5,9 @@ author: flovv
 published: true
 status: publish
 draft: false
+tags: Data Strategy, Advertising
 ---
+
 
 ## Introduction
 We live in a connected world. No matter which website we visit, which app we use and which people we interact with: We leave a digital footprint.  
