@@ -11,7 +11,9 @@ tags: Data Strategy, Advertising
 
 ## Introduction
 We live in a connected world. No matter which website we visit, which app we use and which people we interact with: We leave a digital footprint.  
-Day by day, there is more behavioral data created and it often makes using the internet more comfortable. Here is an example: Netflix concludes from user data which movies we like and subsequently optimizes which videos are suggested to us individually.
+Day by day, there is more behavioral data created and it often makes using the internet more comfortable. 
+
+Here is an example: Netflix concludes from user data which movies we like and subsequently optimizes which videos are suggested to us individually.
 Google individualizes search results and advertisers measure the effect of ad impressions on purchase probability. Tracking data helps companies to better understand consumer behavior and to customize their services.
 User behavior on websites and platforms is mostly captured via tracking pixels (cookies). A "pixel" or "TAG" is a small piece of software that is loaded in the background of a website to collect information (undetected), about users and their behavior on the website.
 But sometimes these TAGs are forgotten and live on as tiny pieces of code somewhere in the depths of a website. In this case they keep collecting data - mostly unwittingly to the website owner. 
