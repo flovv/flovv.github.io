@@ -28,12 +28,14 @@ Another problem occurs in the area of website security and user experience. As s
 These security warnings interfere with the user and can lead to user aborting his/her online purchase. Thus, the implementation of unsafe TAGs has a direct effect on the user experience and thereby also an indirect effect on conversion rates or sales. Most TAGs are invocable as both https and http TAGs.
 
 ## Design of a deliberate data strategy:
-The first step is to get an overview of the owned platforms and to analyze the pixels that are used on them. A possible platform to do that can be found here: (Link to dcd15.com). 
+The first step is to get an overview of the owned platforms and to analyze the pixels that are used on them. A possible platform to do that can be found here: [dcd15.com](http://dcd15.com). 
 The second step is the ongoing control of the implemented pixels and their regular check regarding necessity and use. So-called “TAG Management Systems” offered by Google and Adobe help to do that. These systems are especially useful to avoid time consuming agreements between IT and marketing. It is not surprising that such systems are widely spread already, they can be found on 35% of all websites. But companies using such systems are not fundamentally protected against mistakes.
-<img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/scan.png" width="450px">
+
+<img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/scan.png" width="750px">
+
 It is the aim of such systems to administrate and control all external pixels at one place. But there are a couple of websites where pixels are implemented outside the “Tag Management System” and thereby undermine the idea of the system. For example, figure 4 shows that the Google Tag Manager is implemented, however many pixels are loaded directly from the main website. So the arrows point from the actual website in purple directly to the pixels in blue. 
 Considering the abundance and the complexity of the snares it is to be asked why so many pixels are still implemented and used. The benefit seems to exceed the costs by far. That mainly comes from a more efficient ad delivery because of carefully built user segments which can be addressed via targeting. On the consumer side, this segmentation usually happens on Data Management Platforms (DMP). In our survey, pixels of DMPs are found on 50% of the analyzed websites. Some DMPs also offer to advertisers to buy cookie data from third parties and to deliver ads on an individual basis. 
 
 ## More information
-*[Data Clean Up Site](http://dcd15.com)
-*[Tracking the Trackers, Gary Kovacs](https://www.youtube.com/watch?v=f_f5wNw-2c0)
+* [Data Clean Up Site](http://dcd15.com)
+* [Tracking the Trackers, Gary Kovacs](https://www.youtube.com/watch?v=f_f5wNw-2c0)
