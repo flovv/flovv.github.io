@@ -1,0 +1,103 @@
+---
+layout: post
+title: Analyzing "Brand Ticker" data.
+author: flovv
+published: false
+status: processed
+draft: false
+tags: R 
+---
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(stringr)
+library(lubridate)
+library(ggplot2)
+library(plyr)
+library(grid)
+library(gridExtra)
+library(stargazer)
+require(ggthemes)
+require(reshape2)
+options(stringsAsFactors = FALSE)
+VW <- read.csv("data/BrandData_vw.csv")
+stockData <- read.csv("data/StockData_vw.csv")
+VW$Date <- as.Date(VW$Date)
+stockData$Date <- as.Date(stockData$Date)
+```
+
+[The Brand Ticker](http://www.thebrandticker.com) provides brand specific marketing data. On a day to day basis they list the brand value and top 3 associations gathered from news mentions and social data. They provide no documentation on how they process the data or which sources they use. 
+
+Here is short look at their service.
+I pulled half a year's data in irregular intervalls from their API using a small r-script. See this [GIST](https://gist.github.com/flovv/30a74925958908372e98)  
+
+Due to some recent attention we start the analysis by looking at the Volkswagen (VW) data.
+
+```{r, echo=FALSE}
+tail(VW[,2:(ncol(VW)-1)])
+```
+
+The first 6 columns are the brand associations, gathered from news data, or a survey (who knows...?). It's helpful that the flag attributes already labels the associations as positiv/negativ (red or green). The value column is the so-called "Brand Value".
+
+
+```{r, echo=FALSE, message=FALSE}
+ggplot(VW, aes(Date, value))+ geom_line() +theme_economist() + ylab("Brand value in Mio Euro") + xlab("2015")
+
+```
+
+In order to see if the brand value is related to associations, I color-code the brand value with the top (attr_1) association.
+
+
+```{r, echo=FALSE, message=FALSE}
+
+ggplot(VW, aes(Date, value,group=attr_1, color=attr_1))+ geom_point( size=3) +theme_economist() + labs(color="Top Associations") + ylab("Brand value in Mio Euro") + xlab("2015")
+
+```
+
+For the diesel-gate event, we see that the top association is a rather lagging than predicting variable. The brand value massively drops, the association remains "secure". The association change from "secure" to "polluting" happens  with a distinct lag.
+In order to visualize the second and third association, we can use a simple histogram of mentions in the data set.
+
+```{r, echo=FALSE, message=FALSE,  out.width = '900px', dpi=200}
+sub <- VW[, c("Date", "attr_1", "attr_2", "attr_3")]
+colnames(sub) <- c("Date", "first", "second", "third")
+asso <- melt(sub, id.var="Date")
+
+
+ggplot(asso, aes(value, fill=variable))+ geom_histogram( )  +theme_economist(11) + xlab("Associations") +scale_fill_manual(values=c("#999999", "#E69F00", "#56B4E9"))+ labs(fill="Associations") +theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+As before, we can add all associations to the brand value time series.
+
+```{r, echo=FALSE, message=FALSE,  out.width = '900px', dpi=200}
+mm <- merge(asso, VW, by="Date", all.x=T)
+ggplot(mm, aes(Date, value.y, color=value.x))+ geom_point( size=3) + facet_grid(~variable)+theme_economist(6) + labs(color="Top Associations") + ylab("Brand value in Mio Euro") + xlab("2015")
+```
+
+In order to unterstand the brand value variable it bit better, I scraped VW's stock market data from Yahoo. See this [GIST](https://gist.github.com/flovv/50ed4495911576040e34)   
+
+```{r, echo=FALSE, message=FALSE}
+m <- merge(VW, stockData, by="Date")
+
+m <- m[, c("Date", "value", "Close")]
+colnames(m) <- c("Date", "Brand value in Mio Euro", "Stock price in Euro")
+mm <- melt(m, id.var="Date")
+
+ggplot(mm, aes(Date, value))+ geom_line() +theme_economist() + ylab("") + xlab("2015") + facet_wrap(~variable, scale="free_y")
+```
+
+Apparently brand value is just a linear function of stock market data and can be regarded as  more or less identical. 
+
+```{r,results='asis', echo=F}
+m <- merge(VW, stockData, by="Date")
+
+fit1 <- lm(value~Close, data=m)
+fit2 <- lm(value~Close-1, data=m)
+
+stargazer(fit1, fit2, type = "html" ,title = "Brandtickers Brand value has a direct relation to VW's stock price")
+
+```
+
+
+I find it quite misleading to speak of "Brand Value" and taking stock market data as a reference. Plenty of factors (economic condictions, production costs, ...) have an impact on stock prices, while the value of a brand is related to subjective perceptions. 
+

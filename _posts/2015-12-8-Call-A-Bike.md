@@ -22,15 +22,15 @@ So it looks like I did 403  trips using a Call a Bike in 2014.
  
 After some data cleaning, we will take an initial glimpse at the data.
  
-<img src="/figures/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" width="850px" />
+<img src="/figures/post1/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" width="850px" />
  
 We see a clear pattern of high usage during the week and at commuting hours.
  
-![plot of chunk unnamed-chunk-4](/figures/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](/figures/post1/unnamed-chunk-4-1.png) 
  
 Commute times are basically the same for the morning/evening trips.
  
-![plot of chunk unnamed-chunk-5](/figures/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](/figures/post1/unnamed-chunk-5-1.png) 
  
 Commute times did not change over the year. (some ups and downs -but it's basically stable.)
  
@@ -40,11 +40,11 @@ According to Google Maps the distance is 4.9km. Which makes a total of 1969.8 KM
  
 As this data indicates starting and ending of commutes, we can calculate the time spend at work.
  
-![plot of chunk unnamed-chunk-7](/figures/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](/figures/post1/unnamed-chunk-7-1.png) 
  
 Looks like an easy 50.5118961 hours week (on average). With the time spend at work being quite similar from monday till tuesday. Fridays being more relaxed.
  
-![plot of chunk unnamed-chunk-8](/figures/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](/figures/post1/unnamed-chunk-8-1.png) 
  
 And finally some regression model (using the fantastic stargazer package) to explain the time spend at work ...
  

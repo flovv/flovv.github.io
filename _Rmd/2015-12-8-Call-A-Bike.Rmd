@@ -2,8 +2,8 @@
 layout: post
 title: Analyzing "Call a Bike" bike sharing data.
 author: flovv
-published: false
-status: process
+published: true
+status: processed
 draft: false
 tags: R 
 ---
