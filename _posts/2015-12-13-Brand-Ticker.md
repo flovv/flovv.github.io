@@ -15,7 +15,7 @@ tags: R
 [The Brand Ticker](http://www.thebrandticker.com) provides brand specific marketing data. On a day to day basis they list the brand value and top 3 associations gathered from news mentions and social data. They provide no documentation on how they process the data or which sources they use. 
  
 Here is short look at their service.
-I pulled half a year's data in irregular intervalls from their API using a small r-script. See this [GIST](https://gist.github.com/flovv/30a74925958908372e98)  
+I pulled half a year's data in irregular intervals from their API using a small r-script. See this [GIST](https://gist.github.com/flovv/30a74925958908372e98)  
  
 Due to some recent attention we start the analysis by looking at the Volkswagen (VW) data.
  
@@ -37,7 +37,7 @@ Due to some recent attention we start the analysis by looking at the Volkswagen 
 ## 30 2.977252 6574.628 Volkswagen VW     439 2015-12-08
 {% endhighlight %}
  
-The first 6 columns are the brand associations, gathered from news data, or a survey (who knows...?). It's helpful that the flag attributes already labels the associations as positiv/negativ (red or green). The value column is the so-called "Brand Value".
+The first 6 columns are the brand associations, gathered from news data, or a survey (who knows...?). It's helpful that the flag attributes already label the associations as positiv/negativ (red or green). The value column is the so-called "Brand Value".
  
  
 ![plot of chunk unnamed-chunk-3](/figures/post2/unnamed-chunk-3-1.png) 
