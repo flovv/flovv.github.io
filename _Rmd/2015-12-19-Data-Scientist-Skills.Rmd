@@ -1,0 +1,38 @@
+---
+layout: post
+title: Data  
+author: flovv
+published: false
+status: processed
+draft: false
+tags: R 
+---
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(stringr)
+library(lubridate)
+library(ggplot2)
+library(plyr)
+library(grid)
+library(gridExtra)
+library(stargazer)
+require(ggthemes)
+require(reshape2)
+
+options(stringsAsFactors = FALSE)
+out2 <- read.csv2("data/moreSkills.csv")
+out2$Stepstone <- as.numeric(out2$Stepstone)
+```
+
+What are the key data skills listed in job market job postings in Germany.
+
+
+```{r, echo=FALSE, message=FALSE}
+
+ggplot(out2, aes(reorder(Term, -Stepstone), Stepstone)) +geom_bar(stat="identity")  + theme_economist() +ylab("N")+ geom_bar(stat="identity") + xlab("Search Terms") +theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+
+In order to measure the changes in popularity, I intent to run this analysis on a regular basis. In case you are looking for a job; have a look over [here.](http://umww.de/karriere/stellenangebote/)
