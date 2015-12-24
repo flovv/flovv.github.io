@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: The German Data Scientist Job Market
 author: flovv
@@ -18,12 +18,12 @@ To get some facts, I scraped all available job openings from the sites: Monster,
 Altogether I found 137 open positions from ``58`` companies. 
  
 
-{% highlight text %}
-##    Platform  N
-## 1    Indeed 65
-## 2   Monster 36
-## 3 Stepstone 36
-{% endhighlight %}
+```
+Platform  N
+Indeed 65
+Monster 36
+Stepstone 36
+```
  
 As some companies publish the same position on all three platforms, I try to reduce this double counting by removing all positions that are published by the same company in the same city on the same date more than once.
  
