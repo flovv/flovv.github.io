@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Data  
+title: Analyzing Job Postings: Data-related Job Requirements 
 author: flovv
 published: false
-status: processed
+status: process
 draft: false
 tags: R 
 ---
@@ -23,16 +23,66 @@ require(reshape2)
 options(stringsAsFactors = FALSE)
 out2 <- read.csv2("data/moreSkills.csv")
 out2$Stepstone <- as.numeric(out2$Stepstone)
+out2$Indeed <- as.numeric(out2$Indeed)
 ```
 
-What are the key data skills listed in job market job postings in Germany.
+[Previously](http://flovv.github.io/Data-Scientist-Job-Market/) I wrote about the German data science job market. The scripts are easy to extend to a data-related job requirement analysis. As before I scraped the websites Monster, Indeed and Stepstone for certain keywords. Compared to the previous analysis, this time I just look at the number of listed positions. To give an example the keyword search for "SAS" returned 
+
+```{r, echo=FALSE, message=FALSE}
+out2[out2$Term == "SAS",]
+```
+
+As Monster does return "1000+", for a result-list over 1000, and and Stepstone and Indeed results are highly correlated (r=0.81), in the following, I focus on the "Indeed"-search results.
+So, what are the key "data skills"" listed in job market postings in Germany?
+
+
+```{r, echo=FALSE, message=FALSE, out.width = '850px', dpi=200}
+
+ggplot(out2, aes(reorder(Term, -Indeed), Indeed)) +geom_bar(stat="identity")  + theme_economist() +ylab("N / number of job posting containing the keyword")+ geom_bar(stat="identity") + xlab("Search Terms") +theme(axis.text.x = element_text(angle = 45, hjust = 1)) + ggtitle("Data skills / job posting requirements") 
+
+
+```
+
+Overall Excel is the big outlier, probably because it is listed in wide variety of job postings.
+To drill a bit deeper, I classified the search term by "Category". 
+
+```{r, echo=FALSE, message=FALSE}
+
+ggplot(out2[out2$Category == "Language",], aes(reorder(Term, -Indeed), Indeed)) +geom_bar(stat="identity")  + theme_economist() +ylab("N / number of job posting containing the keyword")+ geom_bar(stat="identity") + xlab("Search Terms") +theme(axis.text.x = element_text(angle = 45, hjust = 1)) + ggtitle("Data skills - Language") + geom_text(aes(label = Indeed, y=-350), size = 3)
+
+```
+
+Due to the type of analysis, I had to omit, R and C ;).
+
+```{r, echo=FALSE, message=FALSE}
+
+ggplot(out2[out2$Category == "Technology",], aes(reorder(Term, -Indeed), Indeed)) +geom_bar(stat="identity")  + theme_economist() +ylab("N / number of job posting containing the keyword")+ geom_bar(stat="identity") + xlab("Search Terms") +theme(axis.text.x = element_text(angle = 45, hjust = 1)) + ggtitle("Data skills - Technology") + geom_text(aes(label = Indeed, y=-350), size = 3)
+
+```
+
+No surprises in the technology category.
+
+```{r, echo=FALSE, message=FALSE}
+
+ggplot(out2[out2$Category == "Environment",], aes(reorder(Term, -Indeed), Indeed)) +geom_bar(stat="identity")  + theme_economist() +ylab("N / number of job posting containing the keyword")+ geom_bar(stat="identity") + xlab("Search Terms") +theme(axis.text.x = element_text(angle = 45, hjust = 1)) + ggtitle("Data skills - Environment") + geom_text(aes(label = Indeed, y=-350), size = 3) + geom_text(aes(label = Indeed, y=-350), size = 3)
+
+```
+
+Quite interesting to see that GIT as caught on in the enterprise world as well. Note to myself, add "SVN" to the list (876 Positions).
 
 
 ```{r, echo=FALSE, message=FALSE}
 
-ggplot(out2, aes(reorder(Term, -Stepstone), Stepstone)) +geom_bar(stat="identity")  + theme_economist() +ylab("N")+ geom_bar(stat="identity") + xlab("Search Terms") +theme(axis.text.x = element_text(angle = 45, hjust = 1))
+ggplot(out2[out2$Category == "Business Intelligence",], aes(reorder(Term, -Indeed), Indeed)) +geom_bar(stat="identity")  + theme_economist() +ylab("N / number of job posting containing the keyword")+ geom_bar(stat="identity") + xlab("Search Terms") +theme(axis.text.x = element_text(angle = 45, hjust = 1)) + ggtitle("Data skills - Business Intelligence") + geom_text(aes(label = Indeed, y=-350), size = 3) + geom_text(aes(label = Indeed, y=-350), size = 3)
 
 ```
 
+Finally, let's look at Buzzwords, apparently I forgot "Big Data" (2014 job posting mentions) in my initial search term list.
 
-In order to measure the changes in popularity, I intent to run this analysis on a regular basis. In case you are looking for a job; have a look over [here.](http://umww.de/karriere/stellenangebote/)
+```{r, echo=FALSE, message=FALSE}
+
+ggplot(out2[out2$Category == "Buzzwords",], aes(reorder(Term, -Indeed), Indeed)) +geom_bar(stat="identity")  + theme_economist() +ylab("N / number of job posting containing the keyword")+ geom_bar(stat="identity") + xlab("Search Terms") +theme(axis.text.x = element_text(angle = 45, hjust = 1)) + ggtitle("Data skills - Buzzwords") 
+
+```
+
+I am curious to see if and how terms change in popularity, as before I intent to run this analysis on a regular basis. And yes, in case you are looking for a job; have a look over [here.](http://umww.de/karriere/stellenangebote/)
