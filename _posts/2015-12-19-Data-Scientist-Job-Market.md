@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: The German Data Scientist Job Market
 author: flovv
