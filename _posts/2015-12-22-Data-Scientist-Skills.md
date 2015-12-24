@@ -10,17 +10,16 @@ tags: R
  
  
 
-[Previously](http://flovv.github.io/Data-Scientist-Job-Market/) I wrote about the German data science job market. The scripts are easy to extend to a data-related job requirement analysis. As before I scraped the websites Monster, Indeed and Stepstone for certain keywords. Compared to the previous analysis, this time I just look at the number of listed positions. To give an example the keyword search for "SAS" returned 
+Previously, I wrote about the German data science job market. The scripts are easy to extend to a data-related job requirement analysis. As before I scraped the websites Monster, Indeed and Stepstone for certain keywords. Compared to the previous analysis, this time I just look at the number of listed positions. To give an example the keyword search for "SAS" returned 
  
 
-{% highlight text %}
+```
 Term Monster Indeed Stepstone Category
 SAS     138    804        10 Language
-{% endhighlight %}
+```
  
 As Monster does return "1000+", for a result-list over 1000, and and Stepstone and Indeed results are highly correlated (r=0.81), in the following, I focus on the "Indeed"-search results.
 So, what are the key "data skills"" listed in job market postings in Germany?
- 
 
 ![plot of chunk unnamed-chunk-3](/figures/post4/unnamed-chunk-3-1.png) 
  
@@ -47,3 +46,5 @@ Finally, let's look at Buzzwords, apparently I forgot "Big Data" (2014 job posti
 ![plot of chunk unnamed-chunk-8](/figures/post4/unnamed-chunk-8-1.png) 
  
 I am curious to see if and how terms change in popularity, as before I intent to run this analysis on a regular basis. And yes, in case you are looking for a job; have a look over [here.](http://umww.de/karriere/stellenangebote/)
+
+
