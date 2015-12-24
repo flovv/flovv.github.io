@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analyzing Job Postings: Data-related Job Requirements 
+title: Data related Job Requirements 
 author: flovv
 published: true
 status: publish
