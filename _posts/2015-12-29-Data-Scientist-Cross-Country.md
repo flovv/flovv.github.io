@@ -18,6 +18,7 @@ As a baseline, I scanned the websites for the number of open positions which con
  
 ![plot of chunk unnamed-chunk-2](/figures/post5/unnamed-chunk-2-1.png) 
  
+ 
 We see a higher number of results for both search terms in the UK. 
 The number of results are highly correlated (r=0.98)
  
