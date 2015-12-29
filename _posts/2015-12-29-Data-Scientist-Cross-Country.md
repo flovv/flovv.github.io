@@ -13,9 +13,8 @@ Writing my first [post](http://flovv.github.io/Data-Scientist-Job-Market/) about
 The [scripts](https://github.com/flovv/Data-Science-Job-Market) are easy to extend to a cross-country comparison. To simplify the analysis, this time I focused on the Indeed website only. 
  
 As a baseline, I scanned the websites for the number of open positions which contain the term "Excel".
- 
- 
- 
+
+
 ![plot of chunk unnamed-chunk-2](/figures/post5/unnamed-chunk-2-1.png) 
  
  
