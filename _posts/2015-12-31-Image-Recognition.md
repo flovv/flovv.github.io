@@ -5,7 +5,7 @@ author: flovv
 published: true
 status: publish
 draft: false
-tags: Image Recognition, R, Emotion Detection
+tags: R
 ---
 
 
