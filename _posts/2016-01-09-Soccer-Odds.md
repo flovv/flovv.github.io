@@ -15,6 +15,8 @@ An essential part of the typical office talk in Germany is about soccer and the 
  
 While I love the banter, let's be data-driven and have a close look at the current odds.
 I wrote a small [R-script](https://gist.github.com/flovv/461dc6a505b21eda10a9) to get the data from bookies on this topic from this [site](http://www.wettfreunde.net/bundesliga-absteiger-wetten/).
+
+
 The probability of being relegated is given by P=1/odds. To exemplify this; on the 20th of December 2015, if you placed 1€ on Darmstadt and they go down, you would have gotten 2.25€ back. That equates to an implied probability of roughly 1/2.25=44%.
  
 There is at least one issue with this simple calculation; the bookies want to make a cut and add a (small) fee to the odds. How can we take the fee out of the probability? We need to normalize all odds by the number of teams being relegated.
