@@ -1,0 +1,68 @@
+---
+layout: post
+title: Who is going down? Bundesliga Betting Odds
+author: flovv
+published: false
+status: process
+draft: false
+tags: R 
+---
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(stringr)
+library(lubridate)
+library(ggplot2)
+library(plyr)
+library(grid)
+library(gridExtra)
+library(stargazer)
+require(ggthemes)
+require(reshape2)
+
+options(stringsAsFactors = FALSE)
+odds1 <- read.csv2("data/odds.csv")
+odds2 <- read.csv2("data/odds_09.01.2016.csv")
+odds1$tipico<- odds1$tipico / sum(odds1$tipico, na.rm=T) * 2
+odds1$bet365<- odds1$bet365 / sum(odds1$bet365, na.rm=T) * 2
+odds1$betsafe<- odds1$betsafe / sum(odds1$betsafe, na.rm=T) * 2
+odds1$prob <- rowSums(odds1[,c("mybet",  "tipico",  "bet365",  "betsafe")], na.rm=T) /4
+odds2$prob <- rowSums(odds2[,c("mybet",  "tipico",  "bet365",	"betsafe")], na.rm=T) /4
+
+```
+
+An essential part of the typical office talk in Germany is about soccer and the Bundesliga. One of the current key questions is; which team will be relegated. The two local teams (SV Darmstadt and Eintracht Frankfurt) are (hot) candidates. 
+
+While I love the banter, let's be data-driven and have a close look at the current odds.
+I wrote a small [R-script](https://gist.github.com/flovv/461dc6a505b21eda10a9) to get the data from bookies on this topic from this [site](http://www.wettfreunde.net/bundesliga-absteiger-wetten/).
+The probability of being relegated is given by P=1/odds. To exemplify this; on the 20th of December 2015, if you placed 1€ on Darmstadt and they go down, you would have gotten 2.25€ back. That equates to an implied probability of roughly 1/2.25=44%.
+
+There is at least one issue with this simple calculation; the bookies want to make a cut and add a (small) fee to the odds. How can we take the fee out of the probability? We need to normalize all odds by the number of teams being relegated.
+We know that at least two teams go down directly, the team placed on the third to last position plays the direct relegation (two games against the third team in the second league). As the last few relegation games all went in favour for the team in the first league, let's say that just two teams go down.
+Side-note; given this prior the simple betting odds are quite inflated (or from another perceptive; the expected return for the bookies on these bets is over 20%).
+So here it is; Darmstadt has a chance of 34% of going down, and Frankfurt a chance of 79% of staying in the league.
+
+```{r, echo=FALSE, message=FALSE}
+
+ggplot(odds1, aes(reorder(Team, -prob), prob*100)) +geom_bar(stat="identity")  + theme_economist() +ylab("Normalized odds - aggreate over all bookies")+ geom_bar(stat="identity") + xlab("") +theme(axis.text.x = element_text(angle = 45, hjust = 1)) + ggtitle("Odds of being relegated on 20th of December 2015") 
+
+```
+
+On the 9th of January I gathered the data again to see if things changed in the last weeks. I expected to see no real changes. 
+
+```{r, echo=FALSE, message=FALSE}
+
+
+
+df <- rbind(data.frame(Team = odds1$Team, prob= odds1$prob, Date="2015-20-12"), data.frame(Team = odds2$Team, prob= odds2$prob, Date="2016-09-01"))
+
+
+ggplot(df[df$Team %in% c("Darmstadt", "Frankfurt"),], aes(Date, prob*100, color=Team, group=Team)) + geom_line()+ geom_point()+ theme_economist() +ylab("Normalized odds - aggreate over all bookies")+ xlab("") + ggtitle("Odds of being relegated") 
+
+
+```
+
+It seems that the 3 additional players that Frankfurt bought in the last few weeks, significantly lowered their probability of going down. As all odds are linked, Darmstadt, with no changes to their team is now given a 36% probability of relegation.
+
+I am excited to see how things play out.
+
