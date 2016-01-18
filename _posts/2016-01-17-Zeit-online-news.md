@@ -15,9 +15,9 @@ In a previous post, I expressed the feeling that artificial intelligence, data s
 One of my favorite news outlet ("Die Zeit") has an open data policy in a sense that they have a public API.
 I thought it would be worth to check my feeling. I should mention that "Die Zeit" is not very technical or economic/finance oriented.
 Without further ado, here it is:
- 
- 
- 
+
+
+
 ![plot of chunk unnamed-chunk-2](/figures/post7/unnamed-chunk-2-1.png) 
 
  
