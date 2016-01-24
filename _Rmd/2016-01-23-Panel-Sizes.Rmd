@@ -1,0 +1,159 @@
+---
+layout: post
+title: On Panel Sizes
+author: flovv
+published: false
+status: process
+draft: false
+tags: R 
+---
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(stringr)
+library(lubridate)
+library(ggplot2)
+library(plyr)
+library(grid)
+library(gridExtra)
+library(stargazer)
+require(ggthemes)
+require(reshape2)
+
+options(stringsAsFactors = FALSE)
+
+n=1000
+p=5
+
+
+test <- c(40, 30, 15, 10 , 5) /100
+
+
+getDraws <- function(n, prob){
+  sum(ifelse(runif(n, 0, 1) <= prob, 1,0)) /n
+}
+#getDraws(n, .05)
+
+getVariance <- function(n, prob, redraws){
+  replicate(redraws, getDraws(n, prob))
+}
+
+line <- NULL
+set.seed(123)
+
+for(i in test){
+  
+  if(exists("line")){
+    line <-  rbind(line, data.frame(sample=getVariance(n, i, 100), trueValue =i))
+  }
+  else{
+    line <-  data.frame(sample=getVariance(n, i, 100), trueValue =i)
+  }
+}
+
+line$trueValue <- as.factor(line$trueValue*100)
+
+confidence.interval = function(c.lev, margin=.5, p.ss, population) {
+  z.val      = qnorm(.5+c.lev/200)
+  ss         = ((population*p.ss-p.ss)/(population-p.ss))
+  c.interval = sqrt((z.val^2 * margin * (1-margin))/ss)
+  r.cint     = round(c.interval*100, digits = 2)
+  return(r.cint)
+}
+
+```
+
+
+In the face of upcoming elections in the US and in Germany, polling is big news.
+One thing that strikes me as enormously missing in the debate is how inaccurate a single poll is. Moreover, one never reads about the uncertainty around a single poll. What is the range of expected outcomes or a least a confidence interval?
+I am by no means an expert on polling, but I thought some simulations would help me interpreting the headline figures more accurately.
+In Germany most of the time, the institute asks around 1000 individuals to get a representative view. Using exemplary vote shares of (40, 30, 15, 10 , 5), I simulated 100 polls and potential outcomes.
+
+
+
+```{r, echo=FALSE, message=FALSE}
+
+ggplot(line,aes(sample*100,  fill=trueValue)) + geom_density(alpha=.4) + xlab("Vote Share in %") + theme_economist(base_size = 12) + ggtitle("Results of simulating potential polling results")
+
+```
+
+The chart illustrates what polling results we would expect given the "true Value" of a single party.
+Let's assume a party (purple) with a "true" vote share of 40%, given the population size (70 Mio.) and the sample size (1000), we can expect polling results somewhere between 36% and 44%.
+
+Another way to represent the uncertainty is by providing confidence intervals. 
+```{r, echo=TRUE, message=FALSE}
+confidence.interval(95, 0.4, 1000, 70000000)
+```
+
+For the case above, we see that in 1 out of 20 cases (95%-interval), the expected polling result is between 40% +/- 3.04. 
+Also for parties with small vote share we see a smaller absolute confidence interval. 
+
+```{r, echo=TRUE, message=FALSE}
+confidence.interval(95, 0.04, 1000, 70000000)
+```
+For example, for a party with 4% true vote share the expected result is between 2.8% and 5.2%. However, the relative polling error is more severe for smaller parties. Both is consistent with the simulated chart above.
+
+## Panel-based Media Measurement
+Panels are not only used to gather data on voter behavior but also to understand media audiences.
+For example, the GFK runs a 5000-household panel to measure TV viewership second by second for ~65 channels.
+While measurement error is annoying in the political discussion, it is more serious in the TV market for two reasons.
+
+First, economically speaking the panel acts as currency. Advertisers buy audience on a cost per mille basis. Hence, if the measurement is off by 10% so is the payment for showing your ad on TV.
+
+To exemplify this, for the show on the 22nd of January 2016; ARD	Sportschau live at 08:15PM, the GFK panel reports a viewership of 4.19 Mio with a market share of 13%.
+Given the panel size, we get a confidence interval of 1 percentage point.
+```{r, echo=TRUE, message=FALSE}
+confidence.interval(95, 0.13, 5000, 50000000)
+```
+Hence, the actual viewership might also be 3.87 Mio. 
+
+
+Second, the relative potential error increases when measuring or reporting smaller channels. If the market share of a channel decreases the relative error increases. The following chart shows the non-linear relationship.
+With most of TV channels having less than 1% market share, it looks like audience reports cannot be reliable, statistically speaking.
+However, errors cancel out, if advertisers book more than a couple of spots and as long as there is no systematic bias in the panel.
+
+
+```{r, echo=FALSE, message=FALSE}
+
+df <- data.frame(m=c(50, 30, 10, 5, 3, 2, 1, .5, .2, .05, 0.01), interval =confidence.interval(95, c(50, 30, 10, 5, 3, 2, 1, .5, .2, .05, 0.01)/100 , 5000, 50000000), order= seq(1,11,1) )
+
+#df <- data.frame(m=c(3, 2, 1, .5, .2, .05), interval =confidence.interval(99, c(3, 2, 1, .5, .2, .05)/100 , 5000, 50000000) )
+
+df$m2 <- factor(df$m)
+
+df$percError <- df$interval / df$m *100
+p <- ggplot(df, aes(y=percError, x=m2)) + geom_point(color="red", size=3)  + ylab("Relative Error, %") + xlab("TV Market Share (%) / Page Impression Share of a Website (%)") + ggtitle("Panel Size 5000, Population 50 Mio")
+p +theme_economist(base_size = 12)
+
+```
+
+With increasing online video usage, advertisers are shifting TV budgets towards online video platforms. Pretty similar to GFK for TV, Nielsen maintains an online panel to measure usage and demographic distribution. 
+However, there is one big catch; Online usage is much more heterogeneous than broadcast TV usage. With many more options (channels) usage is spread among a very high number of websites. With small "market shares", one needs a much bigger panel to calculate reliable usage metrics.
+
+
+```{r, echo=FALSE, message=FALSE}
+
+df <- data.frame(m=c(1000, 3000,  5000, 10000, 20000, 50000), interval =confidence.interval(99,  1/100 , c(1000, 3000,  5000, 10000, 20000, 50000), 50000000), order= seq(1,6,1), size=1 )
+df2 <- data.frame(m=c(1000, 3000,  5000, 10000, 20000, 50000), interval =confidence.interval(99,  .5/100 , c(1000, 3000,  5000, 10000, 20000, 50000), 50000000), order= seq(1,6,1), size=.5 )
+df3 <- data.frame(m=c(1000, 3000,  5000, 10000, 20000, 50000), interval =confidence.interval(99,  .1/100 , c(1000, 3000,  5000, 10000, 20000, 50000), 50000000), order= seq(1,6,1), size=.1 )
+
+hopp <-rbind(df, df2)
+hopp <- rbind(hopp, df3)
+hopp$m2 <- factor(hopp$m)
+hopp$percError <- hopp$interval / hopp$size *100
+
+hopp$size2 <- paste("Market Share", hopp$size, "%")
+
+p <- ggplot(hopp, aes(y=percError, x=m2 ))
+p +theme_economist(base_size = 8)+ geom_point(color="red", size=4) + ylab("Relative Error, %") + xlab("Panel Size") + ggtitle("Varying Panel Size, Population 50 Mio, Varying Website Size") + facet_grid(~size2)
+
+```
+
+The chart above illustrates this. Plenty of websites have less than 0.1% impression market share. To measure their audience, one would need at least a panel of 50 000 users (who allow to measure their usage across all their devices). Nielsen apparently has a panel of ~20 000 users.
+
+There is no (open) discussion about the accuracy of panel-based audience measurement. Advised audience reach figures appear to be exact in almost all reports. 
+Same as in the public polling figures, uncertainty is not a metric that is properly reported and discussed. It seem that decision makers and consumers don't want to be reminded on how fragile parts of the data are.
+
+Some of the code to run the analysis:
+
+<script src="https://gist.github.com/flovv/be6e1c027409e36ec316.js"></script>
