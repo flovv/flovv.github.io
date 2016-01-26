@@ -13,14 +13,14 @@ tags: R
 In the face of upcoming elections in the US and in Germany, polling is big news.
 One thing that strikes me as enormously missing in the debate is how inaccurate a single poll is. Moreover, one never reads about the uncertainty around a single poll. What is the range of expected outcomes or a least a confidence interval?
 I am by no means an expert on polling, but I thought some simulations would help me interpreting the headline figures more accurately.
-In Germany most of the time, the institute asks around 1000 individuals to get a representative view. Using exemplary vote shares of (40, 30, 15, 10 , 5), I simulated 100 polls and potential outcomes.
+In Germany most of the time, polling institutes ask around 1000 individuals to get a representative view. Using exemplary vote shares of (40, 30, 15, 10 , 5) %, I simulated 100 polls and potential outcomes.
 
 
 
 
 ![plot of chunk unnamed-chunk-2](/figures/post8/unnamed-chunk-2-1.png) 
  
-The chart illustrates what polling results we would expect given the "true Value" of a single party.
+The chart illustrates what polling results we would expect given the "true value" of a single party.
 Let's assume a party (purple) with a "true" vote share of 40%, given the population size (70 Mio.) and the sample size (1000), we can expect polling results somewhere between 36% and 44%.
  
 Another way to represent the uncertainty is by providing confidence intervals. 
