@@ -24,10 +24,10 @@ The most common (and maybe intuitive) way to look at advertising effectiveness i
 As segments are generated depending on the user interests, it is fair to assume that users have different base probabilities of buying the item (car) in question.
  
  
-| User segment | #User | Base probability |  Ad uplift  | Ad spend | #Orders | Cost per order           |
-|--------------|-------|------------------|-------------|----------|---------|--------------------------|
-|Car enthusiast| 100   | 1.5%             | 0.50%pp     | 10 000 € | 2       |                 5 000 €  |
-| No Targeting | 100   | 1.0%             | 0.50%pp     | 10 000 € | 1.5     |                 6 667 €  |
+| User segment   | #User | Base probability |  Ad uplift  | Ad spend | #Orders | Cost per order           |
+|----------------|-------|:------------------:|:-------------:|:----------:|---------:|--------------------------:|
+| Car enthusiast | 100   | 1.5%             | 0.50%pp     | 10 000 € | 2       |                 5 000 €  |
+| No Targeting   | 100   | 1.0%             | 0.50%pp     | 10 000 € | 1.5     |                 6 667 €  |
  
 Given the example, a naive marketeer concludes that targeting the car enthusiast segment is more effective as the cost per order is 1 667€ lower.
  
