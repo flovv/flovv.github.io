@@ -1,11 +1,11 @@
 ---
-title: "Revisiting data-driven marketing"
+title: "Revisiting Data-driven Marketing"
 author: "Florian Teschner"
 layout: post
 output: word_document
 published: true
 status: publish
-tags: Advertising, digital media
+tags: Advertising, Digital Media
 draft: no
 ---
  
