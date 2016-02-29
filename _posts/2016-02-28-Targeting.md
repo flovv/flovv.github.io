@@ -11,7 +11,8 @@ draft: no
  
  
 One of the key trends in the advertising industry is (digital) data-driven marketing. The whole things starts with massive, passive data collection. No matter which website we visit or which app we use: We leave a digital footprint. These footprints are compiled for individual users and form so-called user profiles. A set of similar profiles is then aggregated to user segments, which aim at describing a homogeneous set of users with similar preferences and interests. In order to improve marketing activities, companies use these user segments to show them advertisements fitting the user's interest. To be more concrete; users visiting car sites are more likely to see BWM or Daimler-Benz ads. 
- 
+
+
  
 So far this sounds great. It is a win-win situation, advertisers reach an audience with an interest in their product and users see ads that mirror their interest.
 Well the key is; advertisers want to increase their advertising effectiveness. Let's have a look at how advertising is measured. Let's exemplify it by looking at the advertising for a car with two segments; a segment of car enthusiasts and a general population segment. Both segments receive the same ad.
@@ -23,7 +24,7 @@ The most common (and maybe intuitive) way to look at advertising effectiveness i
 As segments are generated depending on the user interests, it is fair to assume that users have different base probabilities of buying the item (car) in question.
  
  
-| User segment | #User | Base probability |  Ad uplift  | Ad Spend | #Orders | Cost per order           |
+| User segment | #User | Base probability |  Ad uplift  | Ad spend | #Orders | Cost per order           |
 |--------------|-------|------------------|-------------|----------|---------|--------------------------|
 |Car enthusiast| 100   | 1.5%             | 0.50%pp     | 10 000 € | 2       |                 5 000 €  |
 | No Targeting | 100   | 1.0%             | 0.50%pp     | 10 000 € | 1.5     |                 6 667 €  |
