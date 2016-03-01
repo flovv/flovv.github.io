@@ -24,16 +24,16 @@ The most common (and maybe intuitive) way to look at advertising effectiveness i
 As segments are generated depending on the user interests, it is fair to assume that users have different base probabilities of buying the item (car) in question.
  
  
-| User segment   | #User | Base probability |  Ad uplift  | Ad spend | #Orders | Cost per order           |
-|----------------|-------|:------------------:|:-------------:|:----------:|---------:|--------------------------:|
-| Car enthusiast | 100   | 1.5%             | 0.50%pp     | 10 000 € | 2       |                 5 000 €  |
-| No Targeting   | 100   | 1.0%             | 0.50%pp     | 10 000 € | 1.5     |                 6 667 €  |
+| User segment   | #Users | Base probability |  Ad uplift  | Ad spend | #Orders | Cost per order           |
+|:----------------|-------|:------------------:|:-------------:|:----------:|---------:|--------------------------:|
+| Car enthusiast | 100   | 1.5%             | 0.50%    | 10 000 € | 2       |                 5 000 €  |
+| No Targeting   | 100   | 1.0%             | 0.50%     | 10 000 € | 1.5     |                 6 667 €  |
  
 Given the example, a naive marketeer concludes that targeting the car enthusiast segment is more effective as the cost per order is 1 667€ lower.
  
 However that is only the easy way of calculating it. What you as a marketeer really want to measure is the incremental uplift. The uplift describes the increase in purchase probability when showing the user ads. The incremental uplift is only measurable by running (controlled) experiments, in which you measure the increase of sales in the segment exposed to ads to the "same" segment not exposed to ads. Such controlled experiments are rarely done on a segment basis.
  
-In this example, both marketing activities have the same incremental uplift in purchase probability (0.5%pp). Hence, if you ignore that the marketeer have to buy targeting data on top of her media spend, the incremental uplift is the same for both groups as is the return for the ad investment.
+In this example, both marketing activities have the same incremental uplift in purchase probability (0.5% p.p.). Hence, if you ignore that the marketeer have to buy targeting data on top of her media spend, the incremental uplift is the same for both groups as is the return for the ad investment.
  
 This brings us to the key message; current systems (ad serving in particular) are designed in a way that they are basically unable to capture users base purchase probability. Hence, they are deeply flawed and purposefully biased towards benefiting targeted ad buying.
  
