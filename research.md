@@ -9,8 +9,6 @@ permalink: /research/
 Prediction Markets, Predictive Analytics, Crowd Sourcing, Advertising  
 
 
-### Publications
-
 ### Refereed Journal Articles
 
 <div>How (not) to Incent Crowd Workers - Payment Schemes and Feedback in Crowdsourcing. Business and Information Systems Engineering.   (2015)</div><br>
