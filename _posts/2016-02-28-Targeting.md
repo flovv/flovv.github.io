@@ -10,7 +10,7 @@ draft: no
 ---
  
  
-One of the key trends in the advertising industry is (digital) data-driven marketing. The whole things starts with massive, passive data collection. No matter which website we visit or which app we use: We leave a digital footprint. These footprints are compiled for individual users and form so-called user profiles. A set of similar profiles is then aggregated to user segments, which aim at describing a homogeneous set of users with similar preferences and interests. In order to improve marketing activities, companies use these user segments to show them advertisements fitting the user's interest. To be more concrete; users visiting car sites are more likely to see BWM or Daimler-Benz ads. 
+One of the key trends in the advertising industry is (digital) data-driven marketing. The whole thing starts with massive, passive data collection. No matter which website we visit or which app we use: We leave a digital footprint. These footprints are compiled for individual users and form so-called user profiles. A set of similar profiles is then aggregated to user segments, which aim at describing a homogeneous set of users with similar preferences and interests. In order to improve marketing activities, companies use these user segments to show them advertisements fitting the user's interest. To be more concrete; users visiting car sites are more likely to see BWM or Daimler-Benz ads. 
 
 
  
