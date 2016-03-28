@@ -11,7 +11,7 @@ draft: no
  
  
  
-In the last two posts [1](http://flovv.github.io/Targeting/), [2](http://flovv.github.io/Targeting/), I tried to discuss how measurement and false metrics drive optimization towards low hanging fruits and in the end degrade ad effectiveness. I would like to follow up with a a short example of how the issue extends into the paid search (e.g. Google Adwords) channel.
+In the last two posts [1](http://flovv.github.io/Targeting/), [2](http://flovv.github.io/Targeting/), I tried to discuss how measurement and false metrics drive optimization towards low hanging fruits and in the end degrade ad effectiveness. I would like to follow up with a short example of how the issue extends into the paid search (e.g. Google Adwords) channel.
 
 
 
@@ -26,14 +26,14 @@ Keywords can be clustered into at least two broad categories: Brand and Generic 
  
 ##So where is the catch?
  
-It is save to assume that advertisers are organically listed in the top positions for brand keywords, while they might not even appear on the first results page for generic terms. As paid advertising is shown above the organic section a majority of users click on the paid links. Hence, an advertiser buying her "own" brand keywords is cannibalizing her organic, free traffic with paid search traffic.
+It is safe to assume that advertisers are organically listed in the top positions for brand keywords, while they might not even appear on the first results page for generic terms. As the paid advertising section is shown above the organic section, a majority of users click on the paid links. Hence, an advertiser buying her "own" brand keywords is cannibalizing her organic, free traffic with paid search traffic.
  
 The following chart illustrates this:
 ![Example of brand and generic keyword buying](/figures/targeting3.png)
  
 The share of incremental traffic for buying generic keywords is much higher compared to buying brand keywords. Using proper experimentation one can figure out what that share is and calculate the cost per incremental visitor as a more reliable metric.
  
-The questions arises why this is usually not done. I see three main reasons: (i) incentives, (ii) additional work and (iii) Google's quality score.
+The question arises why this is usually not done. I see three main reasons: (i) incentives, (ii) additional work and (iii) Google's quality score.
  
 For the team managing paid search it is much easier to communicate low costs per click (CPC) readily delivered by the system compared to relying on a derived metric that needs constant experimentation. As most people are familiar with CPCs they are also commonly used to benchmark channels and/or team performance. Hence increasing CPCs is a difficult story to tell. 
 A part of the cost per click on a keyword is determined by the quality score, Google assigns to an individual advertiser. The lower the score the higher the cost an advertiser has to pay per click.
