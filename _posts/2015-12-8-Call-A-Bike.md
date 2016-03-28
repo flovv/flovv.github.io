@@ -34,7 +34,7 @@ Commute times are basically the same for the morning/evening trips.
  
 Commute times did not change over the year. (some ups and downs -but it's basically stable.)
  
-According to Google Maps the distance is 4.9km. Which makes a total of 1969.8 KM in 2014, at an average speed of: 20.4535897 .
+According to Google Maps the distance is 4.9km. Which makes a total of 1969.8 KM in 2014, at an average speed of: 20.45.
  
 
  
@@ -42,7 +42,7 @@ As this data indicates starting and ending of commutes, we can calculate the tim
  
 ![plot of chunk unnamed-chunk-7](/figures/post1/unnamed-chunk-7-1.png) 
  
-Looks like an easy 50.5118961 hours week (on average). With the time spend at work being quite similar from monday till tuesday. Fridays being more relaxed.
+Looks like an easy 50.512 hours week (on average). With the time spend at work being quite similar from Monday till Tuesday, and Fridays being more relaxed.
  
 ![plot of chunk unnamed-chunk-8](/figures/post1/unnamed-chunk-8-1.png) 
  
@@ -197,4 +197,4 @@ stargazer(lm3,lm4,lm5,  type = "html", title="Explaining commute time back from 
  
 There are more potential factors that explain drive time as well, such as weather conditions (especially west wind).
  
-To sum up; Deutsche Bahn could easily knowwhere I live, where I work, and how much I work. I assume that car sharing data is similar privacy sensitive.
+To sum up; Deutsche Bahn could easily know where I live, where I work, and how much I work. I assume that car sharing data is similar privacy sensitive.
