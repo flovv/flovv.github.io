@@ -11,8 +11,10 @@ draft: no
  
  
 I previously did a short [review](http://flovv.github.io/Image-Recognition/) on Microsoft's image recognition and face detection API. A couple of weeks ago Google [announced](https://cloudplatform.googleblog.com/2016/02/Google-Cloud-Vision-API-enters-beta-open-to-all-to-try.html) their vision API providing some similar features.
- 
 Even though there is no R package or code to dive into this API and their API documentation is rather sparse, I thought it could be fun and inspiring to give it a try.
+
+
+
 In general, it works as Microsoft's API, provide an image, select which kind of analysis you like and receive a (well) coded response.
  
 To give you an idea how that looks like for "face detection".
