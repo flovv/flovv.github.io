@@ -12,7 +12,10 @@ Prediction Markets, Predictive Analytics, Crowd Sourcing, Advertising
 ### Publications
 
 ### Refereed Journal Articles
-<div id="html" class="shiny-html-output shiny-bound-output"><div>How (not) to Incent Crowd Workers - Payment Schemes and Feedback in Crowdsourcing. Business and Information Systems Engineering.   (2015)</div><br><div>Beware of Trend Indicators: How Visual Cues Increase the Disposition Effect. Business and Information Systems Engineering (2015)</div><br><div>A Macroeconomic Forecasting Market. Journal of Business Economics (formerly: Zeitschrift fuer Betriebswirtschaft (ZfB)).  (2015)</div><br><div>The Impact of customizable Market Interfaces on Trading Performance. Electronic Markets.   (2014)</div><br><div>Web vs. Mobile - Comparing Trading Performance in Stationary and Mobile Settings. International Journal of E-Services and Mobile Applications.   (2014)</div><br><div>Analysis of the Disposition Effect: Asymmetry and Prediction Accuracy. Journal of Prediction Markets.   (2013)</div><br><div>Simplifying Market Access: a New Confidence-Based Interface. Journal of Prediction Markets.   (2012)</div><br><div>Short-Selling in Prediction Markets. The Journal of Prediction Markets.   (2011)</div>
+<div>How (not) to Incent Crowd Workers - Payment Schemes and Feedback in Crowdsourcing. Business and Information Systems Engineering.   (2015)</div><br><div>Beware of Trend Indicators: How Visual Cues Increase the Disposition Effect. Business and Information Systems Engineering (2015)</div><br><div>A Macroeconomic Forecasting Market. Journal of Business Economics (formerly: Zeitschrift fuer Betriebswirtschaft (ZfB)).  (2015)</div><br><div>The Impact of customizable Market Interfaces on Trading Performance. Electronic Markets.   (2014)</div><br><div>Web vs. Mobile - Comparing Trading Performance in Stationary and Mobile Settings. International Journal of E-Services and Mobile Applications.   (2014)</div><br>
+<div>Analysis of the Disposition Effect: Asymmetry and Prediction Accuracy. Journal of Prediction Markets.   (2013)</div><br>
+<div>Simplifying Market Access: a New Confidence-Based Interface. Journal of Prediction Markets.   (2012)</div><br>
+<div>Short-Selling in Prediction Markets. The Journal of Prediction Markets.   (2011)</div>
 
 
 ### Monographs
