@@ -5,7 +5,7 @@ layout: post
 output: html_document
 published: true
 status: publish
-tags: R, PhantomJS, Web Scraping, Data Gathering
+tags: R
 draft: no
 ---
  
