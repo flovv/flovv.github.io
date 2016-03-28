@@ -13,8 +13,9 @@ Gathering data from the web is one of the key tasks in order to generate easy da
 Thanks to the fantastic [Rvest R package](http://blog.rstudio.org/2014/11/24/rvest-easy-web-scraping-with-r/) web scraping is pretty straight forward.
 It basically works like this; go to a website, find the right items using the [selector gadget](http://selectorgadget.com/) and plug the element path into your R-code.
 There are various, great tutorials on how to do that  (e.g. [1](https://rpubs.com/catlin/rvest), [2](http://francojc.github.io/web-scraping-with-rvest/) ).
- 
- 
+
+
+
 Increasingly, I see that websites, which (un-)consciously make it hard to scrape their site by employing delayed JavaScript-based rendering. In these cases the simple approach of using rvest breaks down. Examples include the Bwin betting site or the German site [busliniensuche](https://www.busliniensuche.de/). Busliniensuche is a site to compare bus travel providers on price, duration and schedule. 
  
 As side-note, the German bus travel market has been deregulated in 2013, hence the market is still rapidly developing. I thought it would be interesting to analyse the basic market elements and compare bus travel to the established train provider Deutsche Bahn.
