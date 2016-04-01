@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a data scientist at the media agency Universal Mccann (www.umww.de).
+I am a data scientist at the media agency Universal Mccann ([www.umww.de](http://www.umww.de)).
 
 ### Contact me
 
