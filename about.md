@@ -11,11 +11,11 @@ I am a data scientist at the media agency Universal Mccann (www.umww.de).
 [teschner@gmail.com](mailto:teschner@gmail.com)
 
 ### Sites to follow
-www.predictwise.com
+[www.predictwise.com](http://www.predictwise.com)
 
-www.decisionsciencenews.com
+[www.decisionsciencenews.com](http://www.decisionsciencenews.com)
 
-www.r-bloggers.com
+[www.r-bloggers.com](http://www.r-bloggers.com)
 
-www.adcontrarian.blogspot.de
+[www.adcontrarian.blogspot.de](http://www.adcontrarian.blogspot.de)
 
