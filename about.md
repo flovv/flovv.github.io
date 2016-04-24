@@ -19,3 +19,4 @@ I am a data scientist at the media agency Universal Mccann ([www.umww.de](http:/
 
 [www.adcontrarian.blogspot.de](http://www.adcontrarian.blogspot.de)
 
+[www.r-users.com](http://www.r-users.com)
