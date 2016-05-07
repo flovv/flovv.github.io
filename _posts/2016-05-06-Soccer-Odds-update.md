@@ -16,7 +16,9 @@ A while ago, I [wrote](http://flovv.github.io/Soccer-Odds/) about soccer odds in
  
 As the season progressed in quite a negative sense, the question is still relevant.
 Let's have a quick look at the current tableau. 
- 
+
+
+
 ![current tableau](/figures/tabelle.JPG)
  
 There are only two matches to go. The last two teams will go down, while the team placed on the third to last position plays the direct relegation (two games against the third team in the second league).
