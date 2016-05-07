@@ -31,3 +31,5 @@ We see the odds of relegation (directly going to the second league over time). A
 So here it is; Darmstadt has a chance of 17% of going down, and Frankfurt a chance of only 40% of staying in the league. They basically swapped places since my last analysis. 
  
 Well, let's keep our fingers crossed, and hope for the best.
+
+<script src="https://gist.github.com/flovv/461dc6a505b21eda10a9.js"></script>
