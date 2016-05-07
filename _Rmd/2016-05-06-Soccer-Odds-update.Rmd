@@ -1,0 +1,57 @@
+---
+layout: post
+title: Who is going down? Bundesliga Betting Odds - updated
+author: flovv
+published: false
+status: processed
+draft: false
+tags: R 
+---
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+require(plyr)
+require(ggplot2)
+require(ggthemes)
+require(stringr)
+
+options(stringsAsFactors = FALSE)
+
+df <-read.csv2("_Rmd/data/odds_data_combined.csv")
+dd <- ddply(df, .(date, Team), summarise, m=sum(tipico))
+dd$date <- as.Date(dd$date)
+teams <- c("Hannover", "Stuttgart", "Hoffenheim", "Darmstadt", "Augsburg", "Frankfurt", "W. Bremen")
+
+```
+
+
+A while ago, I [wrote](http://flovv.github.io/Soccer-Odds/) about soccer odds in Germany. Specifically I wrote about the odds of relegation for two local teams; SV Darmstadt and Eintracht Frankfurt.
+
+As the season progressed in quite a negative sense, the question is still relevant.
+Let's have a quick look at the current tableau. 
+
+![current tableau](/figures/tabelle.JPG)
+
+There are only two matches to go. The last two teams will go down, while the team placed on the third to last position plays the direct relegation (two games against the third team in the second league).
+
+For the last couple of months I scraped the data from bookies on a somewhat regular basis.
+We see the odds of relegation (directly going to the second league over time). As Hannover has no chance to recover, the odds stopped to update.
+
+```{r, echo=FALSE, message=FALSE}
+
+df2 <- df 
+df2[df2$date > as.Date("2016-03-23"),]$tipico <- df2[df2$date > as.Date("2016-03-23"),]$tipico *1.5/2
+
+
+dd <- ddply(df2, .(date, Team), summarise, m=sum(tipico))
+dd$date <- as.Date(dd$date)
+
+ggplot(dd[dd$Team %in% teams,], aes(date, m, group=Team, color=Team))+ geom_line(size=1.4) + theme_economist(base_size = 14) + xlab("") + ylab("Relegation Probability")
+
+
+
+```
+
+So here it is; Darmstadt has a chance of 17% of going down, and Frankfurt a chance of only 40% of staying in the league. They basically swapped places since my last analysis. 
+
+Well, let's keep our fingers crossed, and hope for the best.
