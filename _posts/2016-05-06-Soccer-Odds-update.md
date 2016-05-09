@@ -32,4 +32,17 @@ So here it is; Darmstadt has a chance of 17% of going down, and Frankfurt a chan
  
 Well, let's keep our fingers crossed, and hope for the best.
 
+### Edit on 9th of May'16:
+What a matchday! Eintracht Frankfurt scored big time against Dortmund. While they are not off the hook (yet), the odds have changed, with only one game to go.
+
+| Team 	| Odds of Relegation (%) 	|
+|-----------	|------------------------	|
+| Stuttgart 	| 93.37 	|
+| Frankfurt 	| 15.38 	|
+| W. Bremen 	| 42.19 	|
+
+Darmstadt won in Berlin and is save. This was almost as unlikely as Leicester winning the Premier League at the beginning of the season ;).
+
+
+
 <script src="https://gist.github.com/flovv/461dc6a505b21eda10a9.js"></script>
