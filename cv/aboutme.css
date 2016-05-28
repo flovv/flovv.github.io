@@ -1,0 +1,138 @@
+
+#visualization-container {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+
+div div {
+    color: black;
+}
+
+#bubble {
+    color: #666666;
+    cursor: default;
+    position: absolute;
+    width: 50%;
+    height: 100px;
+    z-index: 500;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 9pt;
+    text-align: justify;
+}
+
+.present {
+    float: right;
+    font-size: 8pt;
+}
+
+h1 {
+    float: left;
+}
+
+h4 {
+    color: #666666;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12pt;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+#duration {
+    float: right;
+    padding-top: 8px;
+    display: none;
+}
+
+#filler, .timeline {
+	background-color: white;
+}
+
+.description {
+    white-space: normal;
+}
+
+.timeline {
+    text-align: center;
+    z-index: 50;
+}
+
+.tick {
+    border-radius: 5px;
+	color: black;
+	cursor: default;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 9pt;
+	height: 14px;
+	line-height: 14px;
+	padding-left: 4px;
+	position: absolute;
+	text-transform: uppercase;
+	white-space: nowrap;
+	z-index: 200;
+}
+
+.work, .me, .college, .hs, .adult, .timeline {
+	border-radius: 5px;
+	color: black;
+	cursor: default;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 9pt;
+	height: 14px;
+	line-height: 14px;
+	padding-left: 4px;
+	position: absolute;
+	text-transform: uppercase;
+	white-space: nowrap;
+	z-index: 100;
+}
+
+.header-outer {
+    display: none;
+}
+
+#filler {
+   visibility: hidden;
+}
+
+.work {
+	background-color: #00CC99;
+}
+
+.work:hover{
+    background-color: #4DDBB8;
+}
+
+.me {
+	background-color: #0099CC;
+}
+
+.me:hover {
+	background-color: #4DB8DB;
+}
+
+.college {
+	background-color: #C266C2;
+}
+
+.college:hover {
+	background-color: #CE85CE;
+}
+
+.hs {
+	background-color: #FF5C5C;
+}
+
+.hs:hover {
+	background-color: #FF7D7D;
+}
+
+.adult {
+	background-color: #FFD92F;
+}
+
+.adult:hover {
+	background-color: #FFE262;
+}

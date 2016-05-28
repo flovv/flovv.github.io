@@ -1,0 +1,164 @@
+#mc_embed_signup {
+    background: #EDEDED !important;
+    display: none;
+    position: absolute ;
+    top: 150px ;
+    z-index: 50000 ;
+    border-radius: 5px;
+    border: black;
+	font-family: 'Varela Round', sans-serif !important;
+	width: 500px;
+	left: calc((100% - 500px) / 2);
+}
+
+#mc_embed_signup h2 {
+	display: none !important;
+}
+
+#mc-embedded-subscribe {
+	background-color: green !important;
+}
+
+#mc-embedded-subscribe:hover {
+	background-color: darkgreen !important;
+}
+
+div {
+	font-family: 'Varela Round', sans-serif;
+	color: #666666;
+}
+
+#header-container {
+	position: relative;
+	width:100%;
+}
+
+#logo {
+	display: inline-block;
+	position: relative;
+	left: -10px;
+	cursor: pointer;
+}
+
+#contact-container {
+	display: inline-block;
+	position: absolute;
+	top: 23px;
+	right: 0px;
+	margin-right: 5%;
+	padding-right: 5px;
+	color: #999999;
+	font-size: 14px;
+}
+
+nav {
+	color: black;
+	cursor: default;
+	display: inline-block;
+	margin-left: 30px;
+	font-size: 14px;
+	text-transform: uppercase;
+	float: right;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+#subscribe-link {
+	cursor: pointer;
+}
+nav:hover {
+	background-color: #CCCCCC;
+}
+
+#nav-container {
+	display: block;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	margin-right: 5%;
+	width: calc(100% - 500px);
+}
+
+.nav-dropdown {
+	position: absolute;
+	background-color: #EEEEEE;
+	z-index: 9999;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: -5px;
+	margin-top: 3px;
+}
+
+.nav-dropdown a {
+	text-decoration: none;
+	color: #666666;
+}
+
+.nav-dropdown a:hover {
+	color: #333333;
+}
+
+#memoir-container {
+	font-size: 16px;
+	margin-top: 80px;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+#visualization-container {
+	position: relative;
+	top: 25px;
+}
+
+#visualization-container h1 {
+	font-size: 22px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+#visualization-container {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#exploration-container {
+	position: relative;
+	top: 60px;
+	width: 60%;
+	/*can adjust with - maybe make it 50% if you adjust max-width of img*/
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+}
+
+#exploration-container img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	/*if you make this bigger, need to recenter again*/
+	height: auto;
+}
+
+#previous {
+	float: left;
+	margin-left: 15%;
+}
+
+#next {
+	float: right;
+	margin-right: 15%;
+}
+
+#previous a, #next a {
+	color: #999999;
+	text-decoration: none;
+}
