@@ -23,7 +23,7 @@ install_github("flovv/RoogleVision")
 ```
 
 ## Get API Keys
-* Visit [Google's developer console](console.cloud.google.com)
+* Visit [Google's developer console](https://console.cloud.google.com)
 * sign in
 * create a project, enable billing and enable 'Google Cloud Vision API' 
 * go to credentials, create an OAuth 2.0 client ID; copy client_id and client_secret from JSON file.
