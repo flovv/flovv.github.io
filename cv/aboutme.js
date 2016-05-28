@@ -31,7 +31,7 @@ var addElements = function() {
 };
 
 var websiteText;
-websiteText = "<h4>CV</h4>";
+websiteText = "<h4>About me</h4>";
 websiteText += "<div id='duration'><i>Dec 2015 - present</i></div>";
 websiteText += "Mouse-over for more information";
 

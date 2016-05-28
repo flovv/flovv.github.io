@@ -51,56 +51,9 @@ div {
 	font-size: 14px;
 }
 
-nav {
-	color: black;
-	cursor: default;
-	display: inline-block;
-	margin-left: 30px;
-	font-size: 14px;
-	text-transform: uppercase;
-	float: right;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
 
 #subscribe-link {
 	cursor: pointer;
-}
-nav:hover {
-	background-color: #CCCCCC;
-}
-
-#nav-container {
-	display: block;
-	position: absolute;
-	top: 50px;
-	right: 0px;
-	margin-right: 5%;
-	width: calc(100% - 500px);
-}
-
-.nav-dropdown {
-	position: absolute;
-	background-color: #EEEEEE;
-	z-index: 9999;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-left: 5px;
-	padding-right: 5px;
-	margin-left: -5px;
-	margin-top: 3px;
-}
-
-.nav-dropdown a {
-	text-decoration: none;
-	color: #666666;
-}
-
-.nav-dropdown a:hover {
-	color: #333333;
 }
 
 #memoir-container {
@@ -120,9 +73,6 @@ nav:hover {
 	text-align: center;
 }
 
-h1 {
-	font-size: 22px;
-}
 
 #visualization-container {
 	margin-left: 10%;
