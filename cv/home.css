@@ -52,9 +52,14 @@ div {
 }
 
 
+
+
 #subscribe-link {
 	cursor: pointer;
 }
+
+
+
 
 #memoir-container {
 	font-size: 16px;
@@ -73,6 +78,9 @@ div {
 	text-align: center;
 }
 
+h1 {
+	font-size: 22px;
+}
 
 #visualization-container {
 	margin-left: 10%;
