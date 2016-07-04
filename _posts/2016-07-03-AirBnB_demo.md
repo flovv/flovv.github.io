@@ -1,5 +1,5 @@
 ---
-title: "A look at AirBnB demopgraphics"
+title: "A look at AirBnB demographics"
 author: "Florian Teschner"
 layout: post
 output: word_document
