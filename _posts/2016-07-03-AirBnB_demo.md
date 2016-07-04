@@ -17,7 +17,7 @@ A recent [study](http://thenextweb.com/insider/2016/04/26/attractive-airbnb-host
 With the easy availability of image recognition services, even the everyday researcher can do a small analysis.
 A [friend](http://www.timmteubner.de/) provided a small sample of 200 AirBnB avatars which I ran through [Microsoft's face recognition API](http://flovv.github.io/Image-Recognition/).
  
-![Face detection example](/figures/image_collection.png)
+![Face detection example](/figures/imageCollection.png)
  
 Of the 200 images, 117 were labeled as faces, for these faces the API provides a couple of features:
 e.g. age, gender, smile detection, mustache detection and the size of the face.
