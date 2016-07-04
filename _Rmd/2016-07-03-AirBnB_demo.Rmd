@@ -1,0 +1,77 @@
+---
+title: "A look at AirBnB demopgraphics"
+author: flovv
+published: false
+status: process
+draft: false
+tags: R 
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+require(ggplot2)
+require(ggthemes)
+require(plyr)
+require(Rmisc)
+options(stringsAsFactors = FALSE)
+res <- readRDS("data/faceResultsV2.rds")
+
+res$Gender <- as.character(res$faceAttributes.gender)
+res$faceAttributes.age <- as.numeric(as.character(res$faceAttributes.age))
+res$faceRectangle.width <- as.numeric(as.character(res$faceRectangle.width))
+res$faceRectangle.height <- as.numeric(as.character(res$faceRectangle.height))
+res$faceAttributes.facialHair.beard <- as.numeric(as.character(res$faceAttributes.facialHair.beard))
+res$faceAttributes.smile <- as.numeric(as.character(res$faceAttributes.smile))
+
+```
+
+
+Once in a while I use AirBnB. There are a couple of features that I (intuitively) use to judge if an apartment is save to book; ratings, images of the flat and the user avatar. Apparently, these avatars play an important part in the overall service and usage of AirBnB.
+A recent [study](http://thenextweb.com/insider/2016/04/26/attractive-airbnb-hosts-are-more-likely-to-get-bookings/#gref) finds that "Attractive Airbnb hosts are more likely to get bookings, even with bad reviews".
+
+With the easy availability of image recognition services, even the everyday research can do a small analysis.
+A friend provided a small sample of 200 avatars which I ran through [Microsoft's face recognition API](http://flovv.github.io/Image-Recognition/)
+
+![Face detection example](/figures/image_collection.png)
+
+Of the 200 images, 117 were labeled as faces for these faces the API provides a couple of features:
+e.g. age, gender, smile detection, mustache detection and the size of the face.
+
+So let's have a look at the aggregate demographics of our (probably unrepresentative) sample of AirBnB hosts. 62% are male, with an average age of 37.5. 
+The age distribution is shifted upwards for the male population.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(res, aes(faceAttributes.age, color=Gender, fill=Gender)) + geom_density(alpha=0.5) + theme_economist() + xlab("Age")
+```
+
+The difference is substantial and significant. Male AirBnB hosts are almost 7 years older than female hosts.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+dfc <- summarySE(res, groupvars = "Gender", measurevar = c("faceAttributes.age"))
+ggplot(dfc, aes(Gender, faceAttributes.age)) + geom_point()+geom_errorbar(aes(ymin=faceAttributes.age-se, ymax=faceAttributes.age+se), width=.1) +theme_economist()
+```
+
+Let's have a look at the emotion expressed in the avatars. Are female avatars more likely to smile?
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+dfc <- summarySE(res, groupvars = "Gender", measurevar = c("faceAttributes.smile"), na.rm=T)
+ggplot(dfc, aes(Gender, faceAttributes.smile)) + geom_point()+geom_errorbar(aes(ymin=faceAttributes.smile-se, ymax=faceAttributes.smile+se), width=.1) +theme_economist()
+
+```
+
+Contrary to my base assumption, this is not the case. 
+Another feature that might be worth exploring, is the size of the face rectangle. It is basically a measure of the face to image size ratio. 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+dfc <- summarySE(res, groupvars = "Gender", measurevar = c("faceRectangle.width"))
+ggplot(dfc, aes(Gender, faceRectangle.width)) + geom_point()+geom_errorbar(aes(ymin=faceRectangle.width-se, ymax=faceRectangle.width+se), width=.1) +theme_economist()
+```
+
+It seems that guys are more likely to use close-ups as avatars. Even though this study is very limited in the features and sample size used, I can already see the potential of image recognition as an implict data source to improve e-commerce services. 
+I wonder if and how AirBnB uses face detection. 
+
+#Image recognition enables a wide range of quantitative data to the everyday research, as well as for ecommerce platforms trying to improve their services.
+#Previously, I played with the image API's of Google and Microsoft.
+
+
+
+
