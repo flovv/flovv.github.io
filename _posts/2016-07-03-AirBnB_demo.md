@@ -1,10 +1,12 @@
 ---
 title: "A look at AirBnB demopgraphics"
-author: flovv
+author: "Florian Teschner"
+layout: post
+output: word_document
 published: true
 status: publish
-draft: false
-tags: R 
+tags: R
+draft: no
 ---
  
 
