@@ -4,8 +4,8 @@ author: "flovv"
 published: true
 status: publish
 tags: R
-draft: no
 ---
+
 
 Youtube is one of the channels the candidates for the US election use extensively to promote themself.
 Using the public [Youtube API](https://developers.google.com/youtube/v3/docs/standard_parameters) and the [R package tuber](https://cran.r-project.org/web/packages/tuber/tuber.pdf) it is pretty straightforward to create a snapshop of the online discussion and sentiment.
