@@ -6,12 +6,11 @@ status: publish
 tags: R
 draft: no
 ---
- 
-
 
 Youtube is one of the channels the candidates for the US election use extensively to promote themself.
 Using the public [Youtube API](https://developers.google.com/youtube/v3/docs/standard_parameters) and the [R package tuber](https://cran.r-project.org/web/packages/tuber/tuber.pdf) it is pretty straightforward to create a snapshop of the online discussion and sentiment.
- 
+
+
 First, I slightly exended the tuber functionality to gather the channel data for both the Hillary Clinton and Donald Trump youtube channel. (All code is posted at the end of this post.)
 To do that, I first gathered all video IDs of all posted videos and then run queries to gather the video detail data. 
  
