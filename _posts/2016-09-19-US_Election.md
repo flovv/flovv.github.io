@@ -1,10 +1,12 @@
 ---
+layout: post
 title: "Analysing the US election using Youtube data"
 author: "flovv"
 published: true
 status: publish
 tags: R
 ---
+
 
 
 Youtube is one of the channels the candidates for the US election use extensively to promote themself.
