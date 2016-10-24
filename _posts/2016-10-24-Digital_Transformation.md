@@ -7,14 +7,12 @@ tags: digital transformation
 draft: no
 ---
  
-
- 
  
 Digital transformation or digital business transformation is apparently currently one of the hot topics in the German business world.
 What puzzles me slightly, is why just now? The digitization trend has been around for ~20 years. Established buisness models have been destroyed or massively changed due to the trend in the last 15 years. E.g. the music industry around 2000 with the start of Napster, the camera sector twice since the introduction of digital cameras and now with mobile phones taking their place. Other often named categories are; retail (Amazon), taxi (uber), movie (netflix) businesses.
- 
+
 So let's have a look at some data. First, using Google trends we see that the topic is much more searched for in Germany compared to the US.
- 
+
  
 ![plot of chunk unnamed-chunk-2](/figures/post12/unnamed-chunk-2-1.png)
  
