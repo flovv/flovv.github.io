@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Digital Transformation - a German perspective"
 author: "flovv"
 published: true
