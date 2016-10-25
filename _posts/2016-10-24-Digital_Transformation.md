@@ -39,7 +39,9 @@ b) it is more relevant in Germany even though the NYT uses the term frequently
  
 Without having more data on this, it is hard to tell why this is the case.
 I assume, that two key German industries feel the increasing digitization pressure. The automotive industry and the banking sector both struggle publicly to transform themselves towards digital enterprises. 
- 
+
+Source code to get the data from the 3 APIS, NYT, ZEIT and HACKERNEWS:
+<script src="https://gist.github.com/flovv/e2a8d1cf5fb0dd2abd0078887715dcce.js"></script>
  
  
  
