@@ -7,10 +7,12 @@
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 		ga('create', '{{ site.google_analytics }}', 'auto');
+		ga('require', 'GTM-N25M8ZW');
 		ga('send', 'pageview', {
 		  'page': '{{ page.url }}',
 		  'title': '{{ page.title | replace: "'", "\\'" }}'
 		});
 	</script>
 	<!-- End Google Analytics -->
+<script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=pk2uuwj7brrqcj63fhevphz7by"></script>
 {% endif %}
