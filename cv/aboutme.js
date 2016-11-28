@@ -77,17 +77,157 @@ function addListeners() {
                     string += "Visiting Scholar, Microsoft Research  (New York, USA)";
                     $("#bubble").html(string);
                     break;
-
-                //
-
-
-
-                //
-
-
-                //
-
-
+				case "dcd":
+                    string = "<h4>Data Clean up Day</h4>";
+                    string += "Created a project to show the value of digital data";
+                    $("#bubble").html(string);
+                    break;
+				case "henkel":
+                    string = "<h4>Henkel Cosmetics</h4>";
+                    string += "Building statistical models to forecast cost developments";
+                    $("#bubble").html(string);
+                    break;
+				case "eix":
+                    string = "<h4>Economic Indicator Exchange</h4>";
+                    string += "Implemented, maintained and analyzed an online prediction market forecasting the economic development in Germany";
+                    $("#bubble").html(string);
+                    break;
+				case "kurspiloten":
+                    string = "<h4>Handelsblatt Kurspiloten</h4>";
+                    string += "Implemented and analyzed an online stock-based gambling market";
+                    $("#bubble").html(string);
+                    break;
+				case "m2t":
+                    string = "<h4>Meet2Trade</h4>";
+                    string += "Implemented a research trading platform in Java";
+                    $("#bubble").html(string);
+                    break;
+				case "stoccer":
+                    string = "<h4>Stoccer</h4>";
+                    string += "Implemented a prediction market for the EM 2008";
+                    $("#bubble").html(string);
+                    break;
+				case "akx":
+				    string = "<h4>Australian Knowledge Exchange</h4>";
+                    string += "Implemented and analyzed a prediction market for the water levels in Australia with CSIRO";
+                    $("#bubble").html(string);
+                    break;
+					
+                //  WORK
+				case "ra1":
+				    string = "<h4>Research Assistant</h4>";
+                    string += "Institute of Information Systems and Management, Karlsruhe";
+                    $("#bubble").html(string);
+                    break;
+				case "ra2":
+				    string = "<h4>Research Assistant</h4>";
+                    string += "Institute of Information Systems and Management, Karlsruhe";
+                    $("#bubble").html(string);
+                    break;
+				case "dev":
+				    string = "<h4>Freelance Software Engineer</h4>";
+                    string += "Vialog Logistik, G&uuml;tersloh";
+                    $("#bubble").html(string);
+                    break;	
+				case "amadeus":
+				    string = "<h4>Development Intern</h4>";
+                    string += "Amadeus AB (Nice, France)";
+                    $("#bubble").html(string);
+                    break;	
+				case "Promo1":
+				    string = "<h4>Research Assistant and Doctoral Candidate</h4>";
+                    string += "Research on electronic markets, Karlsruhe Institute of Technology";
+                    $("#bubble").html(string);
+                    break;	
+				case "postPromo1":
+				    string = "<h4>Post-Doctoral Researcher</h4>";
+                    string += "Research on electronic markets, predictive systems and Crowd-sourcing, Karlsruhe Institute of Technology";
+                    $("#bubble").html(string);
+                    break;	
+				case "um":
+				    string = "<h4>Director Data Science</h4>";
+                    string += "Leading and scaling the data science department in the D.A.CH region";
+                    $("#bubble").html(string);
+                    break;	
+                // Education
+				case "TH":
+				    string = "<h4>Universit&aumlt Karlsruhe, TH</h4>";
+                    string += "Diploma (German equivalent to a master’s degree) in Industrial Engineering and Management";
+                    $("#bubble").html(string);
+                    break;	
+				case "KTH":
+				    string = "<h4>Royal Institute of Technology</h4>";
+                    string += "Exchange student for two semesters";
+                    $("#bubble").html(string);
+                    break;
+				case "CSIRO":
+				    string = "<h4> Commonwealth Scientific and Industrial Research Organization</h4>";
+                    string += "Research Assistant";
+                    $("#bubble").html(string);
+                    break;	
+				case "Promo":
+				    string = "<h4>Karlsruhe Institute of Technology</h4>";
+                    string += " Dr. in Economics";
+                    $("#bubble").html(string);
+                    break;
+				case "postPromo":
+				    string = "<h4>Karlsruhe Institute of Technology</h4>";
+                    string += "Post-doctoral studies";
+                    $("#bubble").html(string);
+                    break;						
+                // Coding parts
+				case "sql":
+				    string = "<h4>SQL</h4>";
+                    string += "used in various projects at Vialog, Amadeus and at the research institute";
+                    $("#bubble").html(string);
+                    break;	
+				case "R":
+				    string = "<h4>R</h4>";
+                    string += "... I am currently in love with";
+                    $("#bubble").html(string);
+                    break;	
+				case "grails":
+				    string = "<h4>Grails</h4>";
+                    string += "used to build various web-platforms and experiments, e.g. the EIX";
+                    $("#bubble").html(string);
+                    break;	
+				case "java":
+				    string = "<h4>Java</h4>";
+                    string += "used to build meet2trade and various data pipelines";
+                    $("#bubble").html(string);
+                    break;	
+                   
+				case "js":
+				    string = "<h4>Javascript</h4>";
+                    string += "whenever the interface needs a fix ...";
+                    $("#bubble").html(string);
+                    break;	
+                   
+				case "js2":
+				    string = "<h4>Javascript</h4>";
+                    string += "whenever the interface needs a fix ...";
+                    $("#bubble").html(string);
+                    break;	
+				case "python":
+				    string = "<h4>Python</h4>";
+                    string += "build a raspberry PI web-controlled radio, should invest more time ... ";
+                    $("#bubble").html(string);
+                    break;
+				case "sas":
+				    string = "<h4>SAS</h4>";
+                    string += "mostly used for my thesis";
+                    $("#bubble").html(string);
+                    break;	
+				case "php":
+				    string = "<h4>PHP</h4>";
+                    string += "juvenile play time :)";
+                    $("#bubble").html(string);
+                    break;	
+				case "c++":
+				    string = "<h4>C++</h4>";
+                    string += "juvenile play time :)";
+                    $("#bubble").html(string);
+                    break;					
                    }
 	        }
 	});
@@ -133,9 +273,9 @@ var aboutMe = [
 	
 	["Kurspiloten", "me", "kurspiloten", 2011+mar, 2011+dec, true],
 	
-	["EIX", "me", "eix", nov + 2009, dec + 2013, false],
+	["EIX", "me", "eix", nov + 2009, dec + 2013, true],
 	
-	["AKX", "me", "akx", aug + 2008, feb + 2009, false],
+	["AKX", "me", "akx", aug + 2008, feb + 2009, true],
 	
 	["Stoccer", "me", "stoccer", 2007+nov, nov + 2008, true],	
 	
@@ -148,11 +288,11 @@ var aboutMe = [
 	// work
 	["Research Assistent", "hs", "ra1", jul + 2004, aug + 2006, true],
 	["Vialog", "hs", "dev", 2005, dec + 2005, true],
-	["Amadeus", "hs", "amadeus", mar+ 2007, dec + 2007, false],
+	["Amadeus", "hs", "amadeus", mar+ 2007, dec + 2007, true],
 	["RA", "hs", "ra2", 2008, sep + 2008, true],
 	
-	["Doctoral Student", "hs", "Promo1", mar + 2009, aug + 2012, false],
-	["Postdoc", "hs", "postPromo1", sep + 2012, dec + 2013, false],
+	["Doctoral Student", "hs", "Promo1", mar + 2009, aug + 2012, true],
+	["Postdoc", "hs", "postPromo1", sep + 2012, dec + 2013, true],
 	
 	["Universal McCann", "hs", "um", 2014, today, true],
 	filler,

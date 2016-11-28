@@ -4,6 +4,20 @@ title: Some previous projects
 permalink: /projects/
 ---
 
+### Image Recognition and Face Detection with R
+ <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/ImageRec.png" height="150px">
+ 
+ I created two packages to call image recognition APIs. 
+ Microsoft's Cognitive Services API (previously called Project Oxford) [Package: Roxford](https://github.com/flovv/Roxford)
+ and Google's Vision API [Package: RoogleVision](https://github.com/cloudyr/RoogleVision)
+ 
+ 
+### Data Clean Up Day
+ <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/dcd_start.PNG" height="150px">
+ 
+At UM, we created a tool to check one's site on integrated tracking technology.
+[More Information](http://www.datacleanupday.com)
+
 ### Economic Indicator Exchange
  <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/v3.jpg" height="150px">
  
