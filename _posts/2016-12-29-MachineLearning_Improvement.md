@@ -42,6 +42,9 @@ The improvement column lists the percent improvement from the first year best pu
  
 So if there is not a single year that marks instant spike in improvement, what is the hype about? I assume that with the steady process in the recent years AI seems to approach or even surpass human-level performance on some tasks. Basically the news is not a technology breakthrough but rather a passing of an important threshold. 
  
+18.01.2017, Edit:
+Deep-diving in the topic for 2 weeks, it slighly changed my perspective on the current process. Jermey Howard shows how to be better than most peer-reviewed models with a CNN in less than 10 minutes. Check out his amazing youtube [video](http://course.fast.ai/lessons/lesson3.html) (Model development is presented close to the end). Hence, my changed take-away is that it is the massively enhanced availablity of deep learning methods that drives the current hype.
+
  
 In case you want to have a look at the data yourself:
 <script src="https://gist.github.com/flovv/437d6d30b5a1f92e5c482b36f70c69ab.js"></script>
