@@ -45,6 +45,8 @@ So if there is not a single year that marks instant spike in improvement, what i
 18.01.2017, Edit:
 Deep-diving in the topic for 2 weeks, it slighly changed my perspective on the current process. Jermey Howard shows how to be better than most peer-reviewed models with a CNN in less than 10 minutes. Check out his amazing youtube [video](http://course.fast.ai/lessons/lesson3.html) (Model development is presented close to the end). Hence, my changed take-away is that it is the massively enhanced availablity of deep learning methods that drives the current hype.
 
+01.02.2017, 2nd Edit:
+I found a more detailed [analysis](https://srconstantin.wordpress.com/2017/01/28/performance-trends-in-ai/) of performance improvements through deep learning. The author concludes that it is not clear if the discontinuous advancements in NLP and image recognition are due to the algorithm or increases in processing power (usage of GPUs). Moreover looking at other domains the author does not find the performance jumps.
  
 In case you want to have a look at the data yourself:
 <script src="https://gist.github.com/flovv/437d6d30b5a1f92e5c482b36f70c69ab.js"></script>
