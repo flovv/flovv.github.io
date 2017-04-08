@@ -20,3 +20,5 @@ I am a data scientist at the media agency Havas / DBi ([havasmedia.de](http://ww
 [www.adcontrarian.blogspot.de](http://www.adcontrarian.blogspot.de)
 
 [www.r-users.com](http://www.r-users.com)
+
+[www.targetingdaten.de](http://www.targetingdaten.de)
