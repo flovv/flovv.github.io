@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a data scientist at the media agency Universal Mccann ([www.umww.de](http://www.umww.de)).
+I am a data scientist at the media agency Havas / DBi ([havasmedia.de](http://www.havasmedia.de/) / [dbi.io](http://www.dbi.io)).
 
 ### Contact me
 
@@ -20,3 +20,5 @@ I am a data scientist at the media agency Universal Mccann ([www.umww.de](http:/
 [www.adcontrarian.blogspot.de](http://www.adcontrarian.blogspot.de)
 
 [www.r-users.com](http://www.r-users.com)
+
+[www.targetingdaten.de](http://www.targetingdaten.de)
