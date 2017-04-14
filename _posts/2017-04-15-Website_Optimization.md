@@ -19,7 +19,7 @@ The following images shows the difference between test-setting and baseline-sett
 
 
 
-![plot of chunk unnamed-chunk-11](/figures/post20/ContentExperiment.jpg)
+![plot of experiment setting](/figures/post20/ContentExperiment.jpg)
 
  
 What do you expect? Did the test-setting outperform the baseline setting in terms of pageviews?
