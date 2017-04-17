@@ -8,7 +8,7 @@ permalink: /projects/
 <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/targeting_Daten_eng.PNG" height="130px">
 
 Currently, I'm writing a short book about data for targeted advertising.
-[English: targeting-data.com](https://www.targeting-data.com)
+[English: targeting-data.com](https://www.targeting-data.com)  // 
 [German: targetingdaten.de](https://www.targetingdaten.de)
 
 ### Image Recognition and Face Detection with R
