@@ -13,7 +13,7 @@ draft: no
 The Internet Movie Database (Imdb) is a great source to get information about movies. Keras provides access to some part of the cleaned dataset (e.g. for sentiment classification). While sentiment classification is an interesting topic, I wanted to see if it is possible to identify a movie's genre from its description.
 The image illustrates the task;
  
-![plot of chunk unnamed-chunk-4](/figures/post25/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-4](/figures/post25/imdb_classification.png)
  
 To see if that is possible I downloaded the raw data from an [FU-Berlin ftp- server](ftp://ftp.fu-berlin.de/pub/misc/movies/database/). Most movies have multiple genres assigned (e.g. Action and Sci-fi.). I chose to randomly pick one genre in case of multiple assignments.
  
