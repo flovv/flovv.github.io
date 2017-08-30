@@ -17,7 +17,7 @@ The image illustrates the task;
  
 To see if that is possible I downloaded the raw data from an [FU-Berlin ftp- server](ftp://ftp.fu-berlin.de/pub/misc/movies/database/). Most movies have multiple genres assigned (e.g. Action and Sci-fi.). I chose to randomly pick one genre in case of multiple assignments.
  
-So the task at hand is to use a lengthy description to interfere a (noisy) label. Hence, the task is similar to the [Reuters news categorization task](https://rstudio.github.io/keras/articles/examples/reuters_mlp.html). I used the code as a guideline for the model.
+So the task at hand is to use a lengthy description to infer a (noisy) label. Hence, the task is similar to the [Reuters news categorization task](https://keras.rstudio.com/articles/examples/reuters_mlp.html). I used the code as a guideline for the model.
 However, looking at the code, it becomes clear that data preprocessing part is skipped. In order to make it easy for a practitioner to create their own applications, I will try to detail the necessary preprocessing. 
 The texts are represented as a vector of integers (indexes). So basically one builds a dictionary in which each index refers to a particular word.
  
