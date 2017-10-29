@@ -7,8 +7,6 @@ status: publish
 tags: R
 draft: no
 ---
-# Deep learning and the  German Data Science Job Market
-
  
 Almost 2 years ago, I wrote a [short post](http://flovv.github.io/Data-Scientist-Job-Market/) on the German data science market by analysing open position on the key job platforms; Stepstone, Monster and Indeed. Recently I received requests to update the post with fresh data.
  
