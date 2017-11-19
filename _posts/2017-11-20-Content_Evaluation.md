@@ -54,7 +54,6 @@ stargazer(fit1, fit2, fit3, type = "html" ,title = "The value of shares for dail
 
 
 
-{% highlight text %}
 ## 
 ## <table style="text-align:center"><caption><strong>The value of shares for daily traffic</strong></caption>
 ## <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="3"><em>Dependent variable:</em></td></tr>
@@ -80,7 +79,7 @@ stargazer(fit1, fit2, fit3, type = "html" ,title = "The value of shares for dail
 ## <tr><td style="text-align:left">F Statistic</td><td>7.755<sup>***</sup> (df = 2; 30)</td><td>7.755<sup>***</sup> (df = 2; 30)</td><td>5.802<sup>***</sup> (df = 3; 29)</td></tr>
 ## <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="3" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
 ## </table>
-{% endhighlight %}
+
  
 As in the correlation plot, we see that highly shared posts have more daily visits. If you take the estimates at face value one can also state that a linkedIn share is worth 3 times a facebook share in terms of additional traffic.
 In the last regression I also included a variable (DaysOnline) to capture my learning effect. The longer post is online the lower is the daily traffic. (e.g. posts published when I started blogging).
