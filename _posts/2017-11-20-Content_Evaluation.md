@@ -8,9 +8,6 @@ tags: R
 draft: no
 ---
  
-
- 
- 
  
 As most bloggers, I do check my analytics stats on a regular basis. What I do not really look at is social shares. For most blog posts traffic follows a clear pattern; 2 days of increased traffic, followed by a steady decrease to the base traffic volume. 
 The amplitude varies massively depending on how interesting/viral the post was. However, in the long-term this virality does not drive the majority of the traffic but rather the search ranking of individual posts, as 80% of the base traffic comes through organic search results. 
@@ -52,36 +49,28 @@ fit3 <- lm(normalizedPageViews ~ shares + linkedIn1+ DaysOnline, data=dff)
 stargazer(fit1, fit2, fit3, type = "html" ,title = "The value of shares for daily traffic")
 {% endhighlight %}
 
+<table style="text-align:center"><caption><strong>The value of shares for daily traffic</strong></caption><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="3"><em>Dependent variable:</em></td></tr>
+<tr><td></td><td colspan="3" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td colspan="3">normalizedPageViews</td></tr>
+<tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td></tr>
+<tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">shares</td><td>0.043<sup>**</sup></td><td>0.043<sup>**</sup></td><td>0.026</td></tr>
+<tr><td style="text-align:left"></td><td>(0.017)</td><td>(0.017)</td><td>(0.022)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:left">linkedIn1</td><td>0.138</td><td>0.138</td><td>0.101</td></tr>
+<tr><td style="text-align:left"></td><td>(0.126)</td><td>(0.126)</td><td>(0.129)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td></td></tr><tr><td style="text-align:left">DaysOnline</td><td></td><td></td><td>-0.008</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td>(0.006)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:left">Constant</td><td>1.462</td><td>1.462</td><td>5.744</td></tr>
+<tr><td style="text-align:left"></td><td>(1.114)</td><td>(1.114)</td><td>(3.571)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
+<tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>33</td><td>33</td><td>33</td></tr>
+<tr><td style="text-align:left">R<sup>2</sup></td><td>0.341</td><td>0.341</td><td>0.375</td></tr>
+<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.297</td><td>0.297</td><td>0.310</td></tr><tr><td style="text-align:left">Residual Std. Error</td><td>5.042 (df = 30)</td><td>5.042 (df = 30)</td><td>4.994 (df = 29)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>7.755<sup>***</sup> (df = 2; 30)</td><td>7.755<sup>***</sup> (df = 2; 30)</td><td>5.802<sup>***</sup> (df = 3; 29)</td></tr>
+<tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="3" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr></table>
 
 
-{% highlight text %}
-## 
-## <table style="text-align:center"><caption><strong>The value of shares for daily traffic</strong></caption>
-## <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="3"><em>Dependent variable:</em></td></tr>
-## <tr><td></td><td colspan="3" style="border-bottom: 1px solid black"></td></tr>
-## <tr><td style="text-align:left"></td><td colspan="3">normalizedPageViews</td></tr>
-## <tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td></tr>
-## <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">shares</td><td>0.043<sup>**</sup></td><td>0.043<sup>**</sup></td><td>0.026</td></tr>
-## <tr><td style="text-align:left"></td><td>(0.017)</td><td>(0.017)</td><td>(0.022)</td></tr>
-## <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-## <tr><td style="text-align:left">linkedIn1</td><td>0.138</td><td>0.138</td><td>0.101</td></tr>
-## <tr><td style="text-align:left"></td><td>(0.126)</td><td>(0.126)</td><td>(0.129)</td></tr>
-## <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-## <tr><td style="text-align:left">DaysOnline</td><td></td><td></td><td>-0.008</td></tr>
-## <tr><td style="text-align:left"></td><td></td><td></td><td>(0.006)</td></tr>
-## <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-## <tr><td style="text-align:left">Constant</td><td>1.462</td><td>1.462</td><td>5.744</td></tr>
-## <tr><td style="text-align:left"></td><td>(1.114)</td><td>(1.114)</td><td>(3.571)</td></tr>
-## <tr><td style="text-align:left"></td><td></td><td></td><td></td></tr>
-## <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>33</td><td>33</td><td>33</td></tr>
-## <tr><td style="text-align:left">R<sup>2</sup></td><td>0.341</td><td>0.341</td><td>0.375</td></tr>
-## <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.297</td><td>0.297</td><td>0.310</td></tr>
-## <tr><td style="text-align:left">Residual Std. Error</td><td>5.042 (df = 30)</td><td>5.042 (df = 30)</td><td>4.994 (df = 29)</td></tr>
-## <tr><td style="text-align:left">F Statistic</td><td>7.755<sup>***</sup> (df = 2; 30)</td><td>7.755<sup>***</sup> (df = 2; 30)</td><td>5.802<sup>***</sup> (df = 3; 29)</td></tr>
-## <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="3" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
-## </table>
-{% endhighlight %}
- 
 As in the correlation plot, we see that highly shared posts have more daily visits. If you take the estimates at face value one can also state that a linkedIn share is worth 3 times a facebook share in terms of additional traffic.
 In the last regression I also included a variable (DaysOnline) to capture my learning effect. The longer post is online the lower is the daily traffic. (e.g. posts published when I started blogging).
  
@@ -92,7 +81,8 @@ While writing this post, I realized that the script can also be used to analyse;
 on r-bloggers.
  
 Have fun!
- 
+
+<script src="https://gist.github.com/flovv/7fda29822024d5c07b4043fd6195c544.js"></script>
  
  
  
