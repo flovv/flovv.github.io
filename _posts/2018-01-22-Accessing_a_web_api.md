@@ -14,7 +14,7 @@ draft: no
 One of the great features of R is the possibility to quickly access web-services. While some companies have the habit and policy to document their APIs, there is still a large chunk of undocumented but great web-services that help the regular data scientist.
  
 In the following short post, I will show how we can turn a simple web-serivce in a nice R-function. 
-The example I am going to use is the linguee translation service: [DeePL](www.deepl.com). 
+The example I am going to use is the linguee translation service: [DeepL](www.deepl.com). 
 Just as google translate, Deepl features a simple text field. When a user types in text, the translation appears in a second textbox. Users can choose between the languages.
  
 In order to see how the service works in the backend, let's have a quick look at the network traffic.
@@ -123,7 +123,7 @@ deepLTranslate()
 ## [1] 5
 ## 
 ## $result$translations[[1]]$beams[[2]]$postprocessed_sentence
-## [1] "R ist groﬂartig"
+## [1] "R ist gro√üartig"
 ## 
 ## $result$translations[[1]]$beams[[2]]$score
 ## [1] -5000.64
@@ -151,7 +151,7 @@ deepLTranslate()
 ## [1] 6
 ## 
 ## $result$translations[[1]]$beams[[4]]$postprocessed_sentence
-## [1] "R ist groﬂartig."
+## [1] "R ist gro√üartig."
 ## 
 ## $result$translations[[1]]$beams[[4]]$score
 ## [1] -5000.72
