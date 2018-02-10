@@ -22,7 +22,7 @@ Prediction Markets, Predictive Analytics, Crowd Sourcing, Advertising
 
 **The Impact of customizable Market Interfaces on Trading Performance.** Electronic Markets.(2014)
 
-**Web vs. Mobile - Comparing Trading Performance in Stationary and Mobile Settings.* International Journal of E-Services and Mobile Applications. (2014)
+**Web vs. Mobile - Comparing Trading Performance in Stationary and Mobile Settings.** International Journal of E-Services and Mobile Applications. (2014)
 
 **Analysis of the Disposition Effect: Asymmetry and Prediction Accuracy.** Journal of Prediction Markets. (2013)
 
