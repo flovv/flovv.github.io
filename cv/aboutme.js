@@ -141,7 +141,7 @@ function addListeners() {
                     break;	
 				case "postPromo1":
 				    string = "<h4>Post-Doctoral Researcher</h4>";
-                    string += "Research on electronic markets, predictive systems and Crowd-sourcing, Karlsruhe Institute of Technology";
+                    string += "Research on electronic markets, predictive systems and crowd-sourcing, Karlsruhe Institute of Technology";
                     $("#bubble").html(string);
                     break;	
 				case "um":
@@ -149,6 +149,11 @@ function addListeners() {
                     string += "Leading and scaling the data science department in the D.A.CH region";
                     $("#bubble").html(string);
                     break;	
+				case "havas":
+				    string = "<h4>Head of DBi</h4>";
+                    string += "Responsible for data and analytics at Havas Media, Germany";
+                    $("#bubble").html(string);
+                    break;
                 // Education
 				case "TH":
 				    string = "<h4>Universit&aumlt Karlsruhe, TH</h4>";
@@ -185,7 +190,12 @@ function addListeners() {
 				    string = "<h4>R</h4>";
                     string += "... I am currently in love with";
                     $("#bubble").html(string);
-                    break;	
+                    break;
+				case "Keras":
+				    string = "<h4>Deep Learning / Keras</h4>";
+                    string += "creating examples of Deep Learning in R with Keras";
+                    $("#bubble").html(string);
+                    break;						
 				case "grails":
 				    string = "<h4>Grails</h4>";
                     string += "used to build various web-platforms and experiments, e.g. the EIX";
@@ -257,7 +267,7 @@ var dec = 11/12;
 var getDate = new Date();
 var today = getDate.getFullYear() + getDate.getMonth() / 12;
 
-var beginDate = 2002 + sep;
+var beginDate = 2004 + sep;
 var totalMonths = (today - beginDate) * 12;
 
 var filler = ["", "filler", "filler", may + 1992, jun + 1992, true];
@@ -294,27 +304,28 @@ var aboutMe = [
 	["Doctoral Student", "hs", "Promo1", mar + 2009, aug + 2012, true],
 	["Postdoc", "hs", "postPromo1", sep + 2012, dec + 2013, true],
 	
-	["Universal McCann", "hs", "um", 2014, today, true],
+	["Universal McCann", "hs", "um", 2014, 2017+feb, true],
+	["Havas/DBi", "hs", "havas", 2017, today, true],
 	filler,
 	// education
 	
 	["University of Karlsruhe (TH)", "work", "TH", sep + 2003, mar + 2009, true],
 	["KTH", "work", "KTH", sep + 2006, may + 2007, true],	
-	["CSIRO", "work", "CSIRO", aug + 2008, feb + 2009, true],
+	["CSIRO", "work", "CSIRO", aug + 2008, feb + 2009, false],
 	["Karlsruhe Institute of Technology", "work", "Promo", mar + 2009, aug + 2012, true],
 	["KIT", "work", "postPromo", aug + 2012, dec + 2013, true],
 	
 		["Y!", "work", "yahoo", aug + 2011, dec + 2011, true],
-		["MSR", "work", "msr", aug + 2013, dec + 2013, true],
+		["MSR", "work", "msr", aug + 2013, dec + 2013, false],
 	filler,
 
 	// Coding!
-	["PHP", "adult", "php", 2002, 2002+nov, true],
-	["SQL", "college", "sql", 2004+may, today, false],
-	["C++", "adult", "c++", 2002, 2002+nov, true],
+	["PHP", "adult", "php", 2004, 2004+nov, true],
+	["SQL", "college", "sql", 2005+may, today, false],
+	["C++", "adult", "c++", 2004, 2004+nov, true],
 	
 	
-	["Java", "adult", "java", 2003+mar, 2013, false],
+	["Java", "adult", "java", 2005+mar, 2013, false],
 	["JS", "adult", "js", aug + 2011, dec + 2011, true],
 	["JS", "adult", "js2", aug + 2008, dec + 2008, false],
 	["Grails", "adult", "grails", 2008, dec+2014, true],
@@ -323,19 +334,19 @@ var aboutMe = [
 	
 	["SAS", "college", "sas", 2009+may, aug+2012, true],
 	["R", "college", "R", 2012+mar, today, true],
-	
+	["Keras / DL", "college", "Keras", 2017+mar, today, true],
 	
 	filler,
 	
 	//["&laquo;", "tick", "2005tick", 2005, 2006, true],
-	["PAST", "timeline", "2002", 2002, 2003, true],
+	["PAST", "timeline", "2004", 2004, 2005, true],
 	
 
-	["|", "tick", "2003tick", 2003, 2004, false],
-	["2003", "timeline", "2003", 2003, 2004, false],
+	//["|", "tick", "2003tick", 2003, 2004, false],
+	//["2003", "timeline", "2003", 2003, 2004, false],
 	
-	["|", "tick", "2004tick", 2004, 2005, false],
-	["2004", "timeline", "2004", 2004, 2005, false],
+	//["|", "tick", "2004tick", 2004, 2005, false],
+	//["2004", "timeline", "2004", 2004, 2005, false],
 	
 	["|", "tick", "2005tick", 2005, 2006, false],	
 	["2005", "timeline", "2005", 2005, 2006, false],
@@ -361,7 +372,11 @@ var aboutMe = [
 	["|", "tick", "2015tick", 2015, 2016, false],
     ["2015", "timeline", "2015", 2015, 2016, false],
     ["|", "tick", "2016tick", 2016, 2017, false],
-	["PRESENT", "timeline", "2016", 2016, 2017, false]
+	["2016", "timeline", "2016", 2016, 2017, false],
+    ["|", "tick", "2017tick", 2017, 2018, false],
+	["2017", "timeline", "2017", 2017, 2018, false],
+    ["|", "tick", "2018tick", 2018, 2019, false],
+	["PRESENT", "timeline", "2018", 2018, 2019, false]
 ];
 
 var setWidth = function(entryStartTime, entryEndTime) {
