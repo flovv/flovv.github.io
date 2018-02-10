@@ -10,9 +10,12 @@ Prediction Markets, Predictive Analytics, Crowd Sourcing, Advertising
 
 
 ### Refereed Journal Articles
-<div>Crowd Labor Markets as Platform for Group Decision and Negotiation Research: A Comparison to Laboratory Experiment. Group Decision and Negotiation. (forthcoming)</div> <br>
-<div>Manipulation in Conditional Decision Markets. Group Decision and Negotiation. (2017) </div> <br>
-<div>How (not) to Incent Crowd Workers - Payment Schemes and Feedback in Crowdsourcing. Business and Information Systems Engineering.   (2015) </div><br>
+**Crowd Labor Markets as Platform for Group Decision and Negotiation Research: A Comparison to Laboratory Experiment.** Group Decision and Negotiation. (forthcoming)
+
+**Manipulation in Conditional Decision Markets.** Group Decision and Negotiation. (2017)
+
+**How (not) to Incent Crowd Workers - Payment Schemes and Feedback in Crowdsourcing.** Business and Information Systems Engineering.   (2015)
+
 <div>Beware of Trend Indicators: How Visual Cues Increase the Disposition Effect. Business and Information Systems Engineering (2015)</div><br>
 <div>A Macroeconomic Forecasting Market. Journal of Business Economics (formerly: Zeitschrift fuer Betriebswirtschaft (ZfB)).  (2015)</div><br>
 <div>The Impact of customizable Market Interfaces on Trading Performance. Electronic Markets.   (2014)</div><br>
