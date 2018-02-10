@@ -83,7 +83,36 @@ Next, we create the two embedding layer. The input dimension is the number of un
  
 Third, we concatenate the 3 layers and add the network's structure.
 Finally, we use the keras_model (not keras_sequential_model) to set create the model.
- 
+
+{% highlight r %}
+embedding_size_weekday=3
+embedding_size_bridge=2
+
+## 1
+inp1 <- layer_input(shape = c(1), name = 'inp_weekday')
+inp2 <- layer_input(shape = c(1), name = 'inp_bridge')
+inp3 <- layer_input(shape = c(2), name = 'inp_otherVars')
+
+## 2
+embedding_out1 <- inp1 %>% layer_embedding(input_dim = 7+1, output_dim = embedding_size_weekday, input_length = 1, name="embedding_weekday") %>%  layer_flatten()
+
+embedding_out2 <- inp2 %>% layer_embedding(input_dim = 4+1, output_dim = embedding_size_bridge, input_length = 1, name="embedding_bridge") %>%  layer_flatten()
+
+## 3
+combined_model <- layer_concatenate(c(embedding_out1, embedding_out2, inp3)) %>%
+  layer_dense(units=32, activation = "relu") %>%
+  layer_dropout(0.3) %>%
+  layer_dense(units=10, activation = "relu") %>%
+  layer_dropout(0.15) %>%
+  layer_dense(units=1)
+
+## 4
+model <- keras::keras_model(inputs = c(inp1, inp2, inp3), outputs = combined_model)
+
+model %>% compile(loss = "mean_squared_error", optimizer = "sgd", metric="accuracy") 
+
+summary(model)
+{% endhighlight %}
 
 {% highlight text %}
 ## ___________________________________________________________________________
