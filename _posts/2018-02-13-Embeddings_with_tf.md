@@ -104,7 +104,7 @@ df <- data.frame(losses = history$losses$mean_losses, steps=history$step)
 ggplot(df, aes(steps, losses))+ geom_point() +geom_smooth() +theme_bw() + ylab("Loss") + xlab("Training Steps") + ggtitle("Testing: TF Estimators")
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-5](figures/post30/figuresunnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-5](/figures/post30/figuresunnamed-chunk-5-1.png)
  
 To conclude, the package is a great step forward to apply deep neural nets to everyday problems and to quickly use embeddings for categorical variables. Big Kudus to the Rstudio team for their efforts. If you have time left and want a quick update on deep learning for the R community check out [J.J. Allaire's video](https://www.youtube.com/watch?v=atiYXm7JZv0).
  
