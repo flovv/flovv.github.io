@@ -1,5 +1,5 @@
 ---
-title: 'Cluster Analysis - a Surname Experiment'  
+title: 'Cluster Analysis - Naming Pattern in the last century.'  
 author: "flovv"
 layout: post
 published: true
