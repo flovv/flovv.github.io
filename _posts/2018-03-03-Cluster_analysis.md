@@ -1,5 +1,5 @@
 ---
-title: 'Cluster Analysis - Naming Pattern in the last century.'  
+title: 'Cluster Analysis - Naming Pattern in the last Century.'  
 author: "flovv"
 layout: post
 published: true
