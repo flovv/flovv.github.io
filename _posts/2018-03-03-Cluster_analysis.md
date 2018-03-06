@@ -122,7 +122,7 @@ Also, Kmeans is not a great pick for categorical/binary data. One could try usin
  
 In contrast to a supervised analysis, the unsupervised approach leaves more room for interpretation and degrees of freedom. Before writing this post, I looked for clustering examples with a focus on interpretation and applicability to business problems. The closest I found was this [analysis](https://rpubs.com/gabrielmartos/ClusterAnalysis). If you have a good hint, please send me an email.
  
-If you want to reproduce the results, the dataset can be found [here](https://github.com/flovv/flovv.github.io/tree/master/data).
+If you want to reproduce the results, the dataset can be found [here](https://github.com/flovv/flovv.github.io/blob/master/_Rmd/data/final_babyNames.rds).
  
  
  
