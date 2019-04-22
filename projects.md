@@ -6,10 +6,10 @@ permalink: /projects/
 
 ### Book: Data-driven Advertising
 <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/targeting_Daten_eng.PNG" height="130px">
+I wrote a short book on data-driven advertising. 
+[Free: targeting-data.com](http://www.targeting-data.com)  
+[Amazon](https://www.amazon.com/dp/B07QZNWMDH)
 
-Currently, I'm writing a short book about data for targeted advertising.
-[English: targeting-data.com](https://www.targeting-data.com)  // 
-[German: targetingdaten.de](https://www.targetingdaten.de)
 
 ### Image Recognition and Face Detection with R
  <img src="https://raw.githubusercontent.com/flovv/flovv.github.io/master/images/ImageRec.png" height="150px">
