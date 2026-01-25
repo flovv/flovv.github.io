@@ -10,7 +10,7 @@ Prediction Markets, Predictive Analytics, Crowd Sourcing, Advertising
 
 
 ## Refereed Journal Articles
-**Crowd Labor Markets as Platform for Group Decision and Negotiation Research: A Comparison to Laboratory Experiment.** Group Decision and Negotiation. (forthcoming)
+**Crowd Labor Markets as Platform for Group Decision and Negotiation Research: A Comparison to Laboratory Experiment.** Group Decision and Negotiation. (2018)
 
 **Manipulation in Conditional Decision Markets.** Group Decision and Negotiation. (2017)
 
@@ -28,7 +28,7 @@ Prediction Markets, Predictive Analytics, Crowd Sourcing, Advertising
 
 **Simplifying Market Access: a New Confidence-Based Interface.** Journal of Prediction Markets. (2012)
 
-**Short-Selling in Prediction Markets.** The Journal of Prediction Markets.   (2011)</div>
+**Short-Selling in Prediction Markets.** The Journal of Prediction Markets. (2011)
 
 ## Monographs
 
