@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a data scientist at the media agency Havas / DBi ([havasmedia.de](http://www.havasmedia.de/) / [dbi.io](http://www.dbi.io)).
+I am a data scientist at the media agency Havas / csa ([havasmedia.de](http://www.havasmedia.de/) / [csa](https://havasmedianetwork.com/our-services/csa/)).
 
 ### Contact me
 
