@@ -129,6 +129,12 @@ table, th, td {
 .date {
   font-style: italic;
   color: $gray;
+  margin-bottom: 0.2em;
+}
+
+.post h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 // Specify the color of the selection
