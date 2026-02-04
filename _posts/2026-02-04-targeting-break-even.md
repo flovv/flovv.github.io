@@ -9,7 +9,7 @@ draft: no
 ---
 
 
-## Short practial advise on media targeting decisions: 
+## Short practical advise on media targeting decisions: 
 
 1. Calculate the "Break-Even Multiplier" Before Spending
 Instead of asking if a targeting segment will perform better than a broad audience, calculate exactly how much better it needs to be to justify its cost. This "Break-Even Lift" accounts for higher CPMs, data costs, and reduced reach. If a segment requires a 150% performance lift to break even, and your historical best is 20%, that segment is a mathematical non-starter.
