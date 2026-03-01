@@ -169,37 +169,6 @@ It's not just about total market size. It's about **per capita conversion events
 
 AI systems don't learn from total population — they learn from events per user. If your population is 1/30th the size, and your spend scales proportionally, you get 1/30th the events. But the AI system needs the *same* number of events to reach the same level of sophistication.
 
-The graph looks like this:
-
-{% highlight r %}
-# Time to convergence by market size
-market_sizes <- data.frame(
-  market = c("US", "Germany", "Sweden"),
-  population = c(330, 80, 10),  # Millions
-  daily_impressions = c(5, 0.2, 0.05) # Millions
-)
-
-# Required impressions for 9-arm test
-required <- 34  # Million impressions
-
-market_sizes$convergence_weeks <- required / market_sizes$daily_impressions / 7
-market_sizes$convergence_months <- market_sizes$convergence_weeks / 12
-
-ggplot(market_sizes, aes(x = reorder(market, population), y = convergence_months, fill = market)) +
-  geom_col(alpha = 0.7) +
-  geom_text(aes(label = paste0(round(convergence_months, 1), " months")),
-            vjust = -0.5, size = 4, fontface = "bold") +
-  scale_y_continuous("Months to reach statistical significance (9-arm test)",
-                    limits = c(0, 30)) +
-  scale_fill_viridis_d(option = "viridis") +
-  labs(title = "Market Size Determines Whether AI Optimization Is Feasible",
-       subtitle = "Time to accumulate enough data for a 9-arm test",
-       x = "") +
-  theme_minimal(base_size = 12) +
-  theme(legend.position = "none")
-{% endhighlight %}
-
-![Market size comparison](/figures/post35/market-size-convergence.png)
 
 ## What actually happens in practice
 
