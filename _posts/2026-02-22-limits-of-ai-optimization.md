@@ -26,7 +26,7 @@ Basically, if feedback to AI systems (e.g. Ad optimisation systems) is too spars
 
 ## Long Version
 
-AI-driven ad optimization and personalization systems are impressive. TikTok Google, Meta; they can show you the right ad to the right person at the right time, learning and improving continuously. But there's a dirty secret: **these systems are built for the US/Chinese market.**
+AI-driven ad optimization and personalization systems are impressive. TikTok, Google, Meta; they can show you the right ad to the right person at the right time, learning and improving continuously. But there's a dirty secret: **these systems are built for the US/Chinese market.**
 
 When you try to use them in smaller markets like Germany (80 million people) or Sweden (10 million), the math breaks down. The feedback loop that enables AI learning becomes too sparse for the algorithms to work.
 
@@ -154,15 +154,14 @@ The key insight: sample size grows **super-linearly** with the number of arms. 9
 
 Now let's compare market sizes:
 
-| Market | Population | Daily ad impressions* | Time to 7M impressions | Time to 34M impressions |
-|---------|------------|----------------------|------------------------|---------------------------|
-| US | 330M | ~500M | ~2 weeks | ~2 months |
-| Germany | 80M | ~120M | ~2 months | ~9 months |
-| Sweden | 10M | ~15M | ~15 months | ~2+ years |
+| Market | Population | Daily ad impressions | Time to 34M impressions 
+|---------|------------|----------------------|------------------------|
+| US | 330M | ~5M | ~7 weeks | 
+| Germany | 80M | ~0.5M | ~68 weeks | 
+| Sweden | 10M | ~0.1M | ~85 weeks | 
 
-*Assuming per capita daily ad exposure similar across markets
 
-In the US, a 9-arm test converges in a couple of months. In Sweden, the same test takes more than **two years** — by which time the market has changed, the creatives are stale, and the test results are meaningless.
+In the US, a 9-arm test converges in a couple of weeks. In Sweden, the same test takes almost  **two years**;  by which time the market has changed, the creatives are stale, and the test results are meaningless.
 
 ## The per capita problem
 
@@ -177,7 +176,7 @@ The graph looks like this:
 market_sizes <- data.frame(
   market = c("US", "Germany", "Sweden"),
   population = c(330, 80, 10),  # Millions
-  daily_impressions = c(500, 120, 15)  # Millions
+  daily_impressions = c(5, 0.2, 0.05) # Millions
 )
 
 # Required impressions for 9-arm test
