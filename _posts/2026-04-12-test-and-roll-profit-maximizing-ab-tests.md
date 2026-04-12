@@ -23,7 +23,7 @@ draft: no
 
 ## Shiny App to test the implications:
 
-https://testandroll.shinyapps.io/testandroll/
+[Test and Roll Shiny App](https://testandroll.shinyapps.io/testandroll/)
 
 
 ## Long Version
