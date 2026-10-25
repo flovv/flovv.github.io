@@ -116,14 +116,14 @@ Each package is designed for both analysts and AI coding agents (Claude Code, Cu
   <div class="pkg-item">
     <div class="pkg-header">
       <h3>DV360 BidKit</h3>
-      <span class="pkg-subtitle">Custom Bidding DSL Linter, Simulator &amp; Compiler</span>
+      <span class="pkg-subtitle">Custom Bidding DSL Linter, Simulator &amp; Attention Engine</span>
     </div>
     <p class="pkg-desc">
-      Validates, simulates, and compiles custom bidding scripts for Google Display &amp; Video 360 (DV360) locally before platform deployment.
+      Validates, simulates, and compiles custom bidding scripts for Google Display &amp; Video 360 (DV360) locally. Implements zero-vendor-fee attention-based dwell bidding alongside Google 2026 DSL compliance.
     </p>
     <ul class="pkg-tiers">
-      <li><strong>Open-Core (<code>dv360-bidkit</code>, MIT):</strong> AST validator for the Google 2026 DSL specification, safe local simulator (no <code>eval()</code>), Google S2 readiness checks, and rule compilation.</li>
-      <li><strong>Pro (<code>dv360-bidkit-pro</code>, Commercial):</strong> Empirical Bayes Active View shrinkage for low-volume publishers, multi-objective funnel mass-balancing, ternary outlier capping, and campaign bundle export.</li>
+      <li><strong>Open-Core (<code>dv360-bidkit</code>, MIT):</strong> AST validator for Google DSL 2026, safe local simulator (no <code>eval()</code>), Google S2 readiness checks, and open empirical attention dwell tables (Simonov &amp; Valletti 2024 / Lumen benchmarks).</li>
+      <li><strong>Pro (<code>dv360-bidkit-pro</code>, Commercial):</strong> Multi-factor attention calibration (Format &times; Position &times; Domain Spillover), automated MFA clutter discounting, Empirical Bayes shrinkage for low-volume publishers, and 65k DSL script minification.</li>
     </ul>
     <div class="pkg-cmd">
       pip install dv360-bidkit<br>
