@@ -109,7 +109,7 @@ Each package is designed for both analysts and AI coding agents (Claude Code, Cu
       <a href="https://github.com/flovv/spotlift">GitHub</a>
       <a href="https://pypi.org/project/spotlift/">PyPI</a>
       <a href="https://skills.sh/flovv/spotlift/tv-to-web-measurement">Agent Skill (skills.sh)</a>
-      <a href="https://polar.sh/checkout/polar_c_hXcFNDtAA9LqZvTCK3ZVj2XWIakGbUyLWzeIx0sHutk">Pro License</a>
+      <a href="https://buy.polar.sh/polar_cl_eHd0shvN1nvDYVV59IkhvvPDNw4Rxmu77INZ023fbF4">Pro License</a>
     </div>
   </div>
 
