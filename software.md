@@ -134,6 +134,7 @@ Each package is designed for both analysts and AI coding agents (Claude Code, Cu
       <a href="https://github.com/flovv/dv360-bidkit">GitHub</a>
       <a href="https://pypi.org/project/dv360-bidkit/">PyPI</a>
       <a href="https://skills.sh/flovv/dv360-bidkit/dv360-custom-bidding">Agent Skill (skills.sh)</a>
+      <a href="https://dv360-bidkit-mcp.teschner.workers.dev">MCP Server (Edge)</a>
       <a href="https://buy.polar.sh/polar_cl_jeD6EDIDtJxQJiCWKF1dfQ9vWHUomQUV7XxQD3Yj7bT">Pro License</a>
     </div>
   </div>
