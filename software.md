@@ -170,10 +170,10 @@ Each package is designed for both analysts and AI coding agents (Claude Code, Cu
       <span class="pkg-subtitle">Google Performance Max, Demand Gen &amp; Meta Advantage+ Auditor</span>
     </div>
     <p class="pkg-desc">
-      Audits automated black-box ad campaigns in seconds. Unmasks hidden channel spend splits (Search vs. Display vs. YouTube), detects non-converting &ldquo;zombie&rdquo; shopping SKUs, flags low-quality auto-generated video waste, and prevents internal campaign bidding collisions.
+      Audits automated black-box ad campaigns in seconds. Unmasks hidden channel spend splits (Search vs. Display vs. YouTube), deconstructs PMax for Google Meridian MMM, detects non-converting &ldquo;zombie&rdquo; shopping SKUs, flags low-quality auto-generated video waste, and prevents internal campaign bidding collisions.
     </p>
     <ul class="pkg-tiers">
-      <li><strong>Open-Core (<code>ad-sentry</code>, Apache-2.0):</strong> True channel spend reconstruction, feed zombie SKU detection (clicks with zero conversions), brand cannibalization checks, and offline CSV/CLI diagnostic reporting.</li>
+      <li><strong>Open-Core (<code>ad-sentry</code>, Apache-2.0):</strong> True channel spend reconstruction, Google Meridian &amp; PyMC-Marketing MMM export bridge (<code>ad-audit export-meridian</code>), feed zombie SKU detection (clicks with zero conversions), brand cannibalization checks, and offline CSV/CLI diagnostic reporting.</li>
       <li><strong>Pro (<code>ad-sentry-pro</code>, Commercial):</strong> Interactive white-label HTML pitch decks, multi-account MCC batch scanning, creative asset decay modeling, and automated Merchant Center product suppression scripts.</li>
     </ul>
     <div class="pkg-cmd">
