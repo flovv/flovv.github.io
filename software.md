@@ -82,7 +82,7 @@ permalink: /software/
 }
 </style>
 
-Open-core Python packages for advertising measurement and programmatic bidding.
+Open-core Python packages for advertising measurement, placement auditing, and algorithmic bidding.
 
 Each package is designed for both analysts and AI coding agents (Claude Code, Cursor, Codex, Antigravity): deterministic CLI interfaces with `--json` output, offline synthetic datasets for testing without credentials, and installable domain skills on [skills.sh](https://skills.sh).
 
@@ -139,11 +139,61 @@ Each package is designed for both analysts and AI coding agents (Claude Code, Cu
     </div>
   </div>
 
+  <div class="pkg-item">
+    <div class="pkg-header">
+      <h3>TubeSentry</h3>
+      <span class="pkg-subtitle">YouTube &amp; Video Placement Auditor</span>
+    </div>
+    <p class="pkg-desc">
+      Audits placement reports (&ldquo;Where ads showed&rdquo;) across YouTube, Performance Max, and DV360. Identifies Made for Kids (MFK) inventory, passive audio/music streams, foreign script delivery, and performance sinkholes, then generates instant exclusion lists for Google Ads Editor.
+    </p>
+    <ul class="pkg-tiers">
+      <li><strong>Open-Core (<code>tubesentry</code>, MIT):</strong> Deterministic risk pattern detection (MFK, low-intent gaming, passive audio, foreign scripts), spend waste quantification, impression-weighted quality scoring, and Google Ads Editor CSV export.</li>
+      <li><strong>Pro (<code>tubesentry-pro</code>, Commercial):</strong> Multimodal creative-to-channel fit engine, channel-level semantic topic clustering, automated exclusion syncing, and white-label client audit decks.</li>
+    </ul>
+    <div class="pkg-cmd">
+      pip install tubesentry<br>
+      npx skills add flovv/tubesentry --skill youtube-placement-audit
+    </div>
+    <div class="pkg-links">
+      <a href="https://flovv.github.io/tubesentry/">Documentation</a>
+      <a href="https://github.com/flovv/tubesentry">GitHub</a>
+      <a href="https://pypi.org/project/tubesentry/">PyPI</a>
+      <a href="https://skills.sh/flovv/tubesentry/youtube-placement-audit">Agent Skill (skills.sh)</a>
+      <a href="https://buy.polar.sh/polar_cl_lRuifr3uJS0LR0k6frhg3JEKBRZNQq75hv7cS2am9cX">Pro License</a>
+    </div>
+  </div>
+
+  <div class="pkg-item">
+    <div class="pkg-header">
+      <h3>Ad Sentry</h3>
+      <span class="pkg-subtitle">Google Performance Max, Demand Gen &amp; Meta Advantage+ Auditor</span>
+    </div>
+    <p class="pkg-desc">
+      Audits automated black-box ad campaigns in seconds. Unmasks hidden channel spend splits (Search vs. Display vs. YouTube), detects non-converting &ldquo;zombie&rdquo; shopping SKUs, flags low-quality auto-generated video waste, and prevents internal campaign bidding collisions.
+    </p>
+    <ul class="pkg-tiers">
+      <li><strong>Open-Core (<code>ad-sentry</code>, Apache-2.0):</strong> True channel spend reconstruction, feed zombie SKU detection (clicks with zero conversions), brand cannibalization checks, and offline CSV/CLI diagnostic reporting.</li>
+      <li><strong>Pro (<code>ad-sentry-pro</code>, Commercial):</strong> Interactive white-label HTML pitch decks, multi-account MCC batch scanning, creative asset decay modeling, and automated Merchant Center product suppression scripts.</li>
+    </ul>
+    <div class="pkg-cmd">
+      pip install ad-sentry<br>
+      npx skills add flovv/pmax-sentry --skill pmax-delivery-audit
+    </div>
+    <div class="pkg-links">
+      <a href="https://flovv.github.io/ad-sentry/">Interactive Demo</a>
+      <a href="https://github.com/flovv/ad-sentry">GitHub</a>
+      <a href="https://pypi.org/project/ad-sentry/">PyPI</a>
+      <a href="https://skills.sh/flovv/pmax-sentry/pmax-delivery-audit">Agent Skill (skills.sh)</a>
+      <a href="https://buy.polar.sh/polar_cl_vVpyPjGk5be8auvK5NLymklKYgDqjXB4iVec01V9sri">Pro License</a>
+    </div>
+  </div>
+
 </div>
 
 <div class="licensing-box">
   <h3>Commercial Licensing &amp; Support</h3>
   <p>
-    Open-core packages are free under the MIT License on PyPI. Commercial Pro extensions are distributed via <a href="https://polar.sh/spotlift">Polar.sh</a> as pre-compiled native binary wheels (Linux, macOS, Windows) with instant license key delivery and a 14-day refund policy. For support or licensing inquiries: <a href="mailto:teschner@gmail.com">teschner@gmail.com</a>.
+    Open-core packages are free under MIT/Apache licenses on PyPI. Commercial Pro extensions are distributed via <a href="https://polar.sh/spotlift">Polar.sh</a> as pre-compiled native binary wheels or licensed toolkits with instant license key delivery and a 14-day refund policy. For support or licensing inquiries: <a href="mailto:teschner@gmail.com">teschner@gmail.com</a>.
   </p>
 </div>
